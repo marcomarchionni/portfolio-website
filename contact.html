@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact</title>
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+  </head>
+  <body>
+    <!-- Header with logo and main navigation -->
+    <header class="page-header">
+      <img
+        src="img/marco-marchionni-logo.png"
+        alt="marco marchionni's logo"
+        class="main-logo page-header__item"
+      />
+      <nav class="main-menu page-header__item">
+        <ul role="menubar" class="main-menu-list">
+          <li role="presentation">
+            <a role="menuitem" href="index.html" class="main-menu-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              role="menuitem"
+              href="about.html"
+              aria-label="About me"
+              class="main-menu-list__item"
+              >About</a
+            >
+          </li>
+          <li role="presentation">
+            <a role="menuitem" href="work.html" class="main-menu-list__item"
+              >Work</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              role="menuitem"
+              href="contact.html"
+              class="main-menu-list__item main-menu-list__item--active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <input type="checkbox" id="hamburger-input" />
+      <label class="hamburger-menu" for="hamburger-input">
+        <nav role="sidebar menu" class="sidebar-menu">
+          <ul>
+            <li><a role="menuitem" href="index.html">Home</a></li>
+            <li>
+              <a role="menuitem" href="about.html" aria-label="About me"
+                >About</a
+              >
+            </li>
+            <li><a role="menuitem" href="work.html">Work</a></li>
+            <li><a role="menuitem" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </label>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content contact-page">
+      <section>
+        <h1>Contact</h1>
+        <h2>Marco Marchionni</h2>
+        <div class="contact-details-grid">
+          <div class="contact-details-grid__item">
+            <h3>Address</h3>
+            <p>
+              via Alfonso Marchesani 56<br />
+              66054 Vasto Marina (CH)<br />
+              ITALY
+            </p>
+          </div>
+          <div class="contact-details-grid__item">
+            <h3>Email</h3>
+            <a href="mailto:marco.marchionni@gmail.com"
+              >marco.marchionni@gmail.com</a
+            >
+          </div>
+          <div class="contact-details-grid__item">
+            <h3>Telephone</h3>
+            <a href="tel:+393498772307" aria-label="Call me on +39 349 8772307"
+              >+39 349 8772307</a
+            >
+          </div>
+          <div class="contact-details-grid__item">
+            <h3>Skype</h3>
+            <a href="skype:marcomarchionni">marcomarchionni</a>
+          </div>
+
+          <div class="contact-details-grid__item">
+            <h3>Contact Form</h3>
+            <form action="" method="post" id="contact-form">
+              <div class="contact-form-grid">
+                <label
+                  class="standard-label contact-form-grid__item"
+                  for="first-name"
+                  >First Name</label
+                >
+                <input
+                  id="first-name"
+                  name="first-name"
+                  class="contact-form-grid__item"
+                  type="text"
+                  required
+                />
+                <label
+                  class="standard-label contact-form-grid__item"
+                  for="last-name"
+                  >Last Name</label
+                >
+                <input
+                  id="last-name"
+                  name="last-name"
+                  class="contact-form-grid__item"
+                  type="text"
+                  required
+                />
+                <label
+                  class="standard-label contact-form-grid__item"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  id="email"
+                  name="email"
+                  class="contact-form-grid__item"
+                  type="email"
+                  required
+                />
+                <label
+                  class="standard-label contact-form-grid__item"
+                  for="telephone"
+                  >Telephone</label
+                >
+                <input
+                  id="telephone"
+                  name="telephone"
+                  class="contact-form-grid__item"
+                  type="tel"
+                />
+                <label
+                  class="standard-label contact-form-grid__item"
+                  for="message"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="contact-form-grid__item"
+                  maxlength="240"
+                  required
+                ></textarea>
+              </div>
+              <div class="contact-form__submit">
+                <button type="submit" class="button__primary">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with social media links -->
+    <footer class="page-footer">
+      <p class="page-footer__item">Find me on</p>
+      <!-- Social icons -->
+      <div class="social-media page-footer__item">
+        <img src="img/github-logo.svg" alt="github logo" />
+        <img src="img/twitter-logo.svg" alt="twitter logo" />
+        <img src="img/linkedin-logo.svg" alt="linkedin logo" />
+      </div>
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
