@@ -26,19 +26,23 @@ body {
 }
 
 h1 {
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
+  margin: 0.2em 0;
 }
 
 h2 {
+  font-family: "Oswald", sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 0.5em;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0.5em 0;
 }
 
 p {
@@ -115,6 +119,7 @@ main {
 .page-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 95%;
   margin: auto;
   padding: 20px 0px;
@@ -396,10 +401,6 @@ main {
 }
 
 @media all and (max-width: 700px) {
-  .contact-details-grid__item:first-child {
-    grid-area: auto;
-  }
-
   .contact-details-grid__item:last-child {
     grid-area: auto;
   }
@@ -410,14 +411,9 @@ main {
 }
 
 @media all and (min-width: 700px) {
-  .contact-details-grid__item:first-child {
-    grid-row: 1 / 3;
-    grid-column: 1;
-  }
-
   .contact-details-grid__item:last-child {
-    grid-row: 3 / 5;
-    grid-column: 1;
+    grid-row: 1 / 5;
+    grid-column: 2;
   }
 }
 
