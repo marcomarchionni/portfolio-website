@@ -4,6 +4,7 @@
 :root {
   --primary-color: #640304;
   --secondary-color: #2b2b2b;
+  --lighter-secondary-color: #959595;
   --dark-text-color: #2b2b2b;
   --light-text-color: white;
   --bg-color: white;
@@ -23,6 +24,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  color: var(--dark-text-color);
 }
 
 h1 {
@@ -101,7 +103,19 @@ a.button {
   color: var(--light-text-color);
 }
 
-/* 1.5 Page Setup */
+/* 1.5 Forms */
+
+.form-input {
+  border: 1px solid var(--lighter-secondary-color);
+  border-radius: 3px;
+}
+
+.form-textarea {
+  resize: none;
+  height: 200px;
+}
+
+/* 1.6 Page Setup */
 
 body {
   min-height: 100vh;
