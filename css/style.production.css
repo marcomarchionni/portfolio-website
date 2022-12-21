@@ -28,7 +28,7 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 500;
-  margin: 0.2em 0;
+  margin: 0.5em 0;
 }
 
 h2 {
@@ -384,17 +384,17 @@ main {
 
 /* 5.2 About */
 
-.about__cv-download {
+.cv-download {
   text-align: center;
 }
 
-.boat-image {
+.boat-animation {
   width: 300px;
   margin: auto;
   text-align: center;
 }
 
-.boat-image a {
+.boat-animation a {
   font-size: 70%;
   position: relative;
   top: -40px;
