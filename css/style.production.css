@@ -34,12 +34,6 @@ h1 {
 
 h2 {
   font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-h3 {
-  font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: 500;
   margin: 0.5em 0;
@@ -69,7 +63,8 @@ a:active {
 /* 1.4 Buttons */
 
 button,
-.button {
+.button,
+a.button {
   display: inline-block;
   border: none;
   font-family: inherit;
@@ -85,8 +80,10 @@ button,
 
 button:hover,
 .button:hover,
+a.button:hover,
 button:focus,
-.button:focus {
+.button:focus,
+a.button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -96,15 +93,18 @@ button:focus,
   color: white;
 }
 
+a.button__primary {
+  background-color: #640304;
+  color: white;
+}
+
 .button__secondary {
   background-color: #2b2b2b;
   color: white;
 }
 
-a.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+a.button__secondary {
+  background-color: #2b2b2b;
   color: white;
 }
 
