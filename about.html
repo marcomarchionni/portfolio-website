@@ -26,15 +26,20 @@
   <body>
     <!-- Header with logo and main navigation -->
     <header class="page-header">
-      <img
-        src="img/marco-marchionni-logo.png"
-        alt="marco marchionni's logo"
-        class="main-logo page-header__item"
-      />
+      <a href="index.html">
+        <img
+          src="img/marco-marchionni-logo.png"
+          alt="marco marchionni's logo"
+          class="main-logo page-header__item"
+        />
+      </a>
       <nav class="main-menu page-header__item">
         <ul role="menubar" class="main-menu-list">
           <li role="presentation">
-            <a role="menuitem" href="index.html" class="main-menu-list__item"
+            <a
+              role="menuitem"
+              href="index.html"
+              class="main-menu-list__item main-menu-list__item--active"
               >Home</a
             >
           </li>
@@ -43,7 +48,7 @@
               role="menuitem"
               href="about.html"
               aria-label="About me"
-              class="main-menu-list__item main-menu-list__item--active"
+              class="main-menu-list__item"
               >About</a
             >
           </li>
@@ -3466,9 +3471,19 @@
       <p class="page-footer__item">Find me on</p>
       <!-- Social icons -->
       <div class="social-media page-footer__item">
-        <img src="img/github-logo.svg" alt="github logo" />
-        <img src="img/twitter-logo.svg" alt="twitter logo" />
-        <img src="img/linkedin-logo.svg" alt="linkedin logo" />
+        <a
+          href="https://www.linkedin.com/in/marco-marchionni-50886a241/"
+          target="_blank"
+          ><img src="img/linkedin-logo.svg" alt="linkedin logo"
+        /></a>
+        <a href="https://github.com/marcomarchionni" target="_blank"
+          ><img src="img/github-logo.svg" alt="github logo"
+        /></a>
+        <a
+          href="https://stackoverflow.com/users/2864211/marcomk"
+          target="_blank"
+          ><img src="img/stackoverflow-logo.svg" alt="stackoverflow logo"
+        /></a>
       </div>
     </footer>
   </body>
