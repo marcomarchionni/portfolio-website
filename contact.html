@@ -26,48 +26,53 @@
   <body>
     <!-- Header with logo and main navigation -->
     <header class="page-header">
-      <a href="index.html">
+      <a href="index.html" class="page-header__item">
         <img
           src="img/marco-marchionni-logo.png"
           alt="marco marchionni's logo"
-          class="main-logo page-header__item"
+          class="main-logo"
         />
       </a>
-      <nav class="main-menu page-header__item">
-        <ul role="menubar" class="main-menu-list">
-          <li role="presentation">
-            <a
-              role="menuitem"
-              href="index.html"
-              class="main-menu-list__item main-menu-list__item--active"
-              >Home</a
-            >
-          </li>
-          <li role="presentation">
-            <a
-              role="menuitem"
-              href="about.html"
-              aria-label="About me"
-              class="main-menu-list__item"
-              >About</a
-            >
-          </li>
-          <li role="presentation">
-            <a role="menuitem" href="work.html" class="main-menu-list__item"
-              >Work</a
-            >
-          </li>
-          <li role="presentation">
-            <a role="menuitem" href="contact.html" class="main-menu-list__item"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <input type="checkbox" id="hamburger-input" />
-      <label class="hamburger-menu" for="hamburger-input">
-        <nav role="menubar" class="sidebar-menu">
-          <ul>
+      <div class="nav-container page-header__item">
+        <nav class="main-menu">
+          <ul role="menubar" class="main-menu-list">
+            <li role="presentation">
+              <a role="menuitem" href="index.html" class="main-menu-list__item"
+                >Home</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                role="menuitem"
+                href="about.html"
+                aria-label="About me"
+                class="main-menu-list__item"
+                >About</a
+              >
+            </li>
+            <li role="presentation">
+              <a role="menuitem" href="work.html" class="main-menu-list__item"
+                >Work</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                role="menuitem"
+                href="contact.html"
+                class="main-menu-list__item main-menu-list__item--active"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <input type="checkbox" id="hamburger-input" />
+        <div class="hamburger">
+          <span class="hamburger__line hamburger__line1"></span>
+          <span class="hamburger__line hamburger__line2"></span>
+          <span class="hamburger__line hamburger__line3"></span>
+        </div>
+        <nav class="sidebar-menu">
+          <ul role="menubar">
             <li><a role="menuitem" href="index.html">Home</a></li>
             <li>
               <a role="menuitem" href="about.html" aria-label="About me"
@@ -78,8 +83,8 @@
             <li><a role="menuitem" href="contact.html">Contact</a></li>
           </ul>
         </nav>
-      </label>
-      <div class="overlay"></div>
+        <div class="overlay"></div>
+      </div>
     </header>
 
     <!-- Main content -->

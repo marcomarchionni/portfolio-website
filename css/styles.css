@@ -3,6 +3,7 @@
 
 :root {
   --primary-color: #640304;
+  --lighter-primary-color: #963b61;
   --secondary-color: #2b2b2b;
   --lighter-secondary-color: #959595;
   --dark-text-color: #2b2b2b;
@@ -126,9 +127,8 @@ main {
 
 .page-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 90%;
   margin: auto;
   padding: 20px 0px;
 }
@@ -138,19 +138,21 @@ main {
 }
 
 .main-logo {
+  display: block;
   height: 70px;
 }
 
-/* 2.2 Responsive Menu */
-/* 2.2.1 Desktop Menu */
-
-.main-menu.page-header__item {
-  flex-grow: 1;
+.nav-container {
+  flex: 1 0 40px;
   text-align: right;
 }
 
+/* 2.2 Responsive Menu */
+/* 2.2.1 Desktop Menu*/
+
 .main-menu {
   display: block;
+  margin: 16px 0px;
 }
 
 .main-menu ul {
@@ -159,18 +161,26 @@ main {
 
 .main-menu li {
   display: inline-block;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .main-menu-list__item--active {
   text-decoration: none;
 }
 
-/* 2.2.2 Hamburger Menu */
-
-.hamburger-menu,
+.hamburger,
+.sidebar-menu,
 #hamburger-input {
   display: none;
+}
+
+/* 2.2.2 Mobile Menu */
+/* 2.2.2.1 Sidebar Hidden */
+@media screen and (max-width: 350px) {
+  .page-header {
+    width: auto;
+    margin: 0px 5px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -178,56 +188,89 @@ main {
     display: none;
   }
 
-  .hamburger-menu {
-    flex: 0 1 30px;
-    width: 30px;
-    height: 30px;
-    display: block;
-    border: none;
-    padding: 0px;
-    margin: 20px;
-    background: linear-gradient(
-      to bottom,
-      var(--primary-color) 0%,
-      var(--primary-color) 20%,
-      var(--bg-color) 20%,
-      var(--bg-color) 40%,
-      var(--primary-color) 40%,
-      var(--primary-color) 60%,
-      var(--bg-color) 60%,
-      var(--bg-color) 80%,
-      var(--primary-color) 80%,
-      var(--primary-color) 100%
-    );
-    z-index: 1;
+  .nav-container {
+    position: relative;
   }
 
-  .hamburger-menu .sidebar-menu {
+  #hamburger-input,
+  .hamburger {
+    width: 30px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin: -12px 0px 5px 5px;
+  }
+
+  #hamburger-input {
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .hamburger {
+    z-index: 4;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger__line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 1px 0px var(--bg-color) inset;
+  }
+
+  .hamburger__line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .hamburger__line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hamburger__line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .sidebar-menu {
+    display: block;
     visibility: visible;
     position: fixed;
     top: 0;
-    right: -250px;
+    right: 0;
     width: 200px;
     height: 100%;
+    transform: translate(150%);
+    transition: transform 0.5s ease-in-out;
     background-color: var(--darker-bg-color);
-    transition: 0.3s;
-    box-sizing: border-box;
-    z-index: 1;
+    z-index: 2;
   }
 
-  .hamburger-menu ul {
+  .sidebar-menu ul {
     list-style-type: none;
-    margin: 0px;
+    margin-top: 100px;
     text-align: center;
     padding: 0px;
   }
 
-  .hamburger-menu li {
+  .sidebar-menu li {
     width: 100%;
     line-height: 3;
     border-bottom: 1px solid var(--light-text-color);
   }
-  .hamburger-menu a {
+
+  .sidebar-menu li:first-child {
+    border-top: 1px solid var(--light-text-color);
+  }
+
+  .sidebar-menu a {
     text-decoration: none;
     padding: 10px 50px;
   }
@@ -241,15 +284,28 @@ main {
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.35s, visibility 3.5s, height 0.35s;
+    transition: opacity 0.5s, visibility 0.5s;
     overflow: hidden;
     background: black;
-    z-index: 0;
+    z-index: 1;
   }
 
-  #hamburger-input:checked + .hamburger-menu .sidebar-menu {
-    visibility: visible;
-    right: 0px;
+  /* 2.2.2.2 Sidebar Visible */
+
+  .nav-container #hamburger-input:checked ~ .hamburger .hamburger__line1 {
+    transform: rotate(45deg);
+  }
+
+  .nav-container #hamburger-input:checked ~ .hamburger .hamburger__line2 {
+    transform: scaleY(0);
+  }
+
+  .nav-container #hamburger-input:checked ~ .hamburger .hamburger__line3 {
+    transform: rotate(-45deg);
+  }
+
+  .nav-container #hamburger-input:checked ~ .sidebar-menu {
+    transform: translateX(0);
   }
 
   #hamburger-input:checked ~ .overlay {
