@@ -71,3 +71,10 @@ node_modules/
 
 # stylelint config
 stylelint.config.js
+
+# prettier config
+prettierrc.js
+prettier.cofig.js
+
+# VS project manager config
+setting.json
