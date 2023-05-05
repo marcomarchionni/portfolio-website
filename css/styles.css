@@ -130,7 +130,14 @@ main {
   align-items: center;
   width: 90%;
   margin: auto;
-  padding: 20px 0px;
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 576px) {
+  .page-header {
+    width: 100%;
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 .page-header__item {
@@ -176,12 +183,6 @@ main {
 
 /* 2.2.2 Mobile Menu */
 /* 2.2.2.1 Sidebar Hidden */
-@media screen and (max-width: 350px) {
-  .page-header {
-    width: auto;
-    margin: 0px 5px;
-  }
-}
 
 @media screen and (max-width: 650px) {
   .main-menu {
@@ -431,29 +432,48 @@ main {
 
 /* 5.3 Work */
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+.mywork-content {
+  max-width: 100%;
+  padding: 0 0.5rem;
+  margin: auto;
 }
 
-.grid__item {
-  background-color: var(--darker-bg-color);
-  padding: 10px;
-}
-
-@media all and (max-width: 750px) and (min-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+@media all and (min-width: 576px) {
+  .mywork-content {
+    max-width: 90%;
+    padding: 0;
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (min-width: 1200px) {
+  .mywork-content {
+    max-width: 70%;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media all and (max-width: 576px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+}
+
+.grid__item {
+  border: 2px solid var(--primary-color);
+}
+
+.grid-item-image {
+  padding: 1px;
+}
+
+.grid-item-text {
+  padding: 1.5rem;
 }
 
 /* 5.4 Contact */
