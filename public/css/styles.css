@@ -32,18 +32,18 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 500;
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 
 h2 {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 
 p {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 
 a:link,
@@ -118,14 +118,15 @@ body {
   flex-direction: column;
 }
 
-main {
+/* main {
   flex: 1;
-}
+} */
 
 /* 2. HEADER */
 /* 2.1 Header Container */
 
 .page-header {
+  flex-grow: 0;
   display: flex;
   align-items: center;
   width: 90%;
@@ -318,9 +319,24 @@ main {
 /* 3. MAIN */
 
 .main-content {
-  max-width: 700px;
-  padding: 0 10px;
-  margin: 0px auto;
+  width: 70%;
+  padding-top: 2rem;
+  margin: auto;
+  flex-grow: 1;
+}
+
+@media all and (max-width: 1200px) {
+  .main-content {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .main-content {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 /* 4. FOOTER */
@@ -329,8 +345,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%;
-  margin: auto;
   padding: 20px 0px;
 }
 
@@ -350,7 +364,6 @@ main {
 .profile {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
   align-items: center;
   padding-bottom: 40px;
 }
@@ -358,7 +371,7 @@ main {
 .profile__portrait {
   flex: 0 0 250px;
   border-radius: 50%;
-  padding: 20px;
+  padding: 2rem;
   margin: auto;
 }
 
@@ -370,14 +383,15 @@ main {
 
 .profile__text {
   flex: 1 0 250px;
-  padding: 20px;
+  padding: 2rem;
 }
 
 /* 5.2 About */
 
-.cv-download {
-  text-align: center;
-}
+/* .about-text {
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+} */
 
 .boat-animation {
   width: 300px;
@@ -432,47 +446,28 @@ main {
 
 /* 5.3 Work */
 
-.mywork-content {
-  max-width: 100%;
-  padding: 0 0.5rem;
-  margin: auto;
-}
-
-@media all and (min-width: 576px) {
-  .mywork-content {
-    max-width: 90%;
-    padding: 0;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .mywork-content {
-    max-width: 70%;
-  }
-}
-
-.grid {
+.mywork-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
 @media all and (max-width: 576px) {
-  .grid {
+  .mywork-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 }
 
-.grid__item {
-  border: 2px solid var(--primary-color);
+.mywork-grid__item {
+  border: 1px solid var(--primary-color);
 }
 
-.grid-item-image {
+.item-image {
   padding: 1px;
 }
 
-.grid-item-text {
+.item-text {
   padding: 1.5rem;
 }
 
@@ -480,8 +475,19 @@ main {
 
 .contact-details-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 40px;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 1fr;
+  gap: 1rem 1rem;
+}
+
+.contact-details-grid__item {
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+}
+
+.contact-details-grid__item:first-child {
+  display: flex;
+  flex-direction: column;
 }
 
 @media all and (max-width: 700px) {
@@ -494,17 +500,20 @@ main {
   }
 }
 
-@media all and (min-width: 700px) {
+/* @media all and (min-width: 700px) {
   .contact-details-grid__item:last-child {
     grid-row: 1 / 5;
     grid-column: 2;
   }
+} */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-form-grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 5px;
+.contact-form input {
+  margin-bottom: 0.5rem;
 }
 
 .contact-form__submit {

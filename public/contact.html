@@ -20,7 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Oswald:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -89,37 +90,41 @@
 
     <!-- Main content -->
     <main class="main-content">
-      <h1>Contact</h1>
+      <h1>Contacts</h1>
       <div class="contact-details-grid">
         <div class="contact-details-grid__item">
-          <h2>Address</h2>
-          <p>
-            via Alfonso Marchesani 56<br />
-            66054 Vasto Marina (CH)<br />
-            ITALY
-          </p>
-        </div>
-        <div class="contact-details-grid__item">
-          <h2>Email</h2>
-          <p>
-            <a href="mailto:marco.marchionni@gmail.com"
-              >marco.marchionni@gmail.com</a
-            >
-          </p>
-        </div>
-        <div class="contact-details-grid__item">
-          <h2>Telephone</h2>
-          <p>
-            <a href="tel:+393498772307" aria-label="Call me on +39 349 8772307"
-              >+39 349 8772307</a
-            >
-          </p>
-        </div>
-        <div class="contact-details-grid__item">
-          <h2>Skype</h2>
-          <p><a href="skype:marcomarchionni">marcomarchionni</a></p>
-        </div>
+          <div class="contact-address">
+            <h2>Address</h2>
+            <p>
+              via Alfonso Marchesani 56<br />
+              66054 Vasto Marina (CH)<br />
+              ITALY
+            </p>
+          </div>
 
+          <div class="contact-email">
+            <h2>Email</h2>
+            <p>
+              <a href="mailto:marco.marchionni@gmail.com"
+                >marco.marchionni@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="contact-telephone">
+            <h2>Telephone</h2>
+            <p>
+              <a
+                href="tel:+393498772307"
+                aria-label="Call me on +39 349 8772307"
+                >+39 349 8772307</a
+              >
+            </p>
+          </div>
+          <div class="contact-skype">
+            <h2>Skype</h2>
+            <p><a href="skype:marcomarchionni">marcomarchionni</a></p>
+          </div>
+        </div>
         <div class="contact-details-grid__item">
           <h2>Contact Form</h2>
           <form
@@ -127,7 +132,7 @@
             method="post"
             id="contact-form"
           >
-            <div class="contact-form-grid">
+            <div class="contact-form">
               <label
                 class="standard-label contact-form-grid__item"
                 for="first-name"
@@ -140,6 +145,7 @@
                 type="text"
                 required
               />
+
               <label
                 class="standard-label contact-form-grid__item"
                 for="last-name"
@@ -152,6 +158,7 @@
                 type="text"
                 required
               />
+
               <label class="standard-label contact-form-grid__item" for="email"
                 >Email</label
               >
@@ -162,6 +169,7 @@
                 type="email"
                 required
               />
+
               <label
                 class="standard-label contact-form-grid__item"
                 for="telephone"
@@ -173,6 +181,7 @@
                 class="contact-form-grid__item form-input"
                 type="tel"
               />
+
               <label
                 class="standard-label contact-form-grid__item"
                 for="message"
@@ -185,11 +194,12 @@
                 maxlength="500"
                 required
               ></textarea>
-            </div>
-            <div class="contact-form__submit">
-              <button type="submit" class="button button__primary">
-                Send Message
-              </button>
+
+              <div class="contact-form__submit">
+                <button type="submit" class="button button__primary">
+                  Send Message
+                </button>
+              </div>
             </div>
           </form>
         </div>

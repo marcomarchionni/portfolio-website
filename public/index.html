@@ -20,7 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Oswald:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
   <body>
@@ -101,10 +102,13 @@
       <div class="profile__text">
         <h1>Hello World!</h1>
         <p>
-          My name is Marco Marchionni. I am a <span>web</span> developer from
-          Vasto, Italy.
+          My name is Marco Marchionni. I am an Italian web developer with a very
+          diverse background. I worked as a TV producer, IT translator, stock
+          and options trader and I lived in Bologna, London, Rome, New York,
+          Cagliari and Naples.
         </p>
-        <a href="work.html">Check out some of my code</a>
+        <div><a href="about.html">More info about me</a></div>
+        <div><a href="work.html">Check out some of my code</a></div>
       </div>
     </main>
 
@@ -128,5 +132,28 @@
         /></a>
       </div>
     </footer>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDiEquXzhbFm0_i4_7iNZ_UghX4XMmYh-w",
+        authDomain: "personal-portfolio-f3a9d.firebaseapp.com",
+        projectId: "personal-portfolio-f3a9d",
+        storageBucket: "personal-portfolio-f3a9d.appspot.com",
+        messagingSenderId: "105775211368",
+        appId: "1:105775211368:web:b5390057a980ea1ad86cdd",
+        measurementId: "G-ZYBXB0EV0P",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
