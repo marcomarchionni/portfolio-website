@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Oswald:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css" /> -->
@@ -26,112 +26,353 @@
 
   <body>
     <!-- Header with logo and main menu -->
-    <header class="page-header">
-      <a href="index.html" class="page-header__item">
-        <img
-          src="img/marco-marchionni-logo.png"
-          alt="marco marchionni's logo"
-          class="main-logo"
-        />
-      </a>
-      <div class="nav-container page-header__item">
-        <nav class="main-menu">
-          <ul role="menubar" class="main-menu-list">
-            <li role="presentation">
-              <a
-                role="menuitem"
-                href="index.html"
-                class="main-menu-list__item main-menu-list__item--active"
-                >Home</a
-              >
-            </li>
-            <li role="presentation">
-              <a
-                role="menuitem"
-                href="about.html"
-                aria-label="About me"
-                class="main-menu-list__item"
-                >About</a
-              >
-            </li>
-            <li role="presentation">
-              <a role="menuitem" href="work.html" class="main-menu-list__item"
-                >Work</a
-              >
-            </li>
-            <li role="presentation">
-              <a
-                role="menuitem"
-                href="contact.html"
-                class="main-menu-list__item"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <input type="checkbox" id="hamburger-input" />
-        <div class="hamburger">
-          <span class="hamburger__line hamburger__line1"></span>
-          <span class="hamburger__line hamburger__line2"></span>
-          <span class="hamburger__line hamburger__line3"></span>
+    <header class="header">
+      <div class="header-container">
+        <h1 class="main-title">MARCO MARCHIONNI</h1>
+        <div class="nav-container">
+          <nav class="main-menu">
+            <ul role="menubar">
+              <li role="presentation">
+                <a role="menuitem" href="#home" class="main-menu__item"
+                  ><h3>Home</h3></a
+                >
+              </li>
+              <li role="presentation">
+                <a
+                  role="menuitem"
+                  href="#about"
+                  aria-label="About me"
+                  class="main-menu__item"
+                  ><h3>About</h3></a
+                >
+              </li>
+              <li role="presentation">
+                <a role="menuitem" href="#work" class="main-menu__item"
+                  ><h3>Work</h3></a
+                >
+              </li>
+              <li role="presentation">
+                <a role="menuitem" href="#contact" class="main-menu__item"
+                  ><h3>Contact</h3></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- <input type="checkbox" id="hamburger-input" />
+          <div class="hamburger">
+            <span class="hamburger__line hamburger__line1"></span>
+            <span class="hamburger__line hamburger__line2"></span>
+            <span class="hamburger__line hamburger__line3"></span>
+          </div>
+          <nav class="sidebar-menu">
+            <ul role="menubar">
+              <li><a role="menuitem" href="index.html">Home</a></li>
+              <li>
+                <a role="menuitem" href="about.html" aria-label="About me"
+                  >About</a
+                >
+              </li>
+              <li><a role="menuitem" href="work.html">Work</a></li>
+              <li><a role="menuitem" href="contact.html">Contact</a></li>
+            </ul>
+          </nav> -->
+          <div class="overlay"></div>
         </div>
-        <nav class="sidebar-menu">
-          <ul role="menubar">
-            <li><a role="menuitem" href="index.html">Home</a></li>
-            <li>
-              <a role="menuitem" href="about.html" aria-label="About me"
-                >About</a
-              >
-            </li>
-            <li><a role="menuitem" href="work.html">Work</a></li>
-            <li><a role="menuitem" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="overlay"></div>
       </div>
     </header>
 
     <!-- Main content -->
-    <main class="main-content profile">
-      <div class="profile__portrait">
-        <img
-          src="img/marco-marchionni-profile-picture.jpg"
-          alt="Marco Marchionni's profile picture"
-        />
-      </div>
-      <div class="profile__text">
-        <h1>Hello World!</h1>
-        <p>
-          My name is Marco Marchionni. I am an Italian web developer with a very
-          diverse background. I worked as a TV producer, IT translator, stock
-          and options trader and I lived in Bologna, London, Rome, New York,
-          Cagliari and Naples.
-        </p>
-        <div><a href="about.html">More info about me</a></div>
-        <div><a href="work.html">Check out some of my code</a></div>
-      </div>
+    <main>
+      <section id="home">
+        <div class="home-text">
+          <h1>
+            I'm a full-stack developer with a full range of interests and
+            experiences.
+          </h1>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about-container">
+          <div class="about-text">
+            <p>
+              I’m a full-stack developer with a diverse background and
+              wide-ranging interests. As a screenwriter, I’ve learned that
+              creativity thrives when combined with careful planning, solid
+              architecture, and continuous rewriting. As a TV producer, I’ve
+              successfully reconciled conflicting perspectives and overcome last
+              minute challenges. My experience as a stock and option trader has
+              sharpened my self-discipline and forward thinking. In order to
+              enhance my decision making process, I started developing my own
+              software tools and exploring professional solutions and innovative
+              technologies. Now I'm excited to bring this unique blend of
+              creativity, technical expertise, and disciplined thinking to the
+              world of software development. I’m eager to collaborate with
+              talented individuals, pooling our skills and knowledge to achieve
+              results we can truly be proud of.
+            </p>
+            <p>
+              I practice kung fu and I enjoy the sea in any season of the year.
+            </p>
+            <br />
+            <div class="cv-download">
+              <a href="files/cv.pdf" target="_blank" download>Download My CV</a>
+            </div>
+          </div>
+          <div class="about-boat">
+            <object data="img/boat.svg" type="image/svg+xml">
+              <!-- Fallback content goes here, for browsers that don't support SVGs -->
+            </object>
+            <a href="http://www.freepik.com" class="about-boat__caption"
+              ><small>Designed by rawpixel.com / Freepik</small></a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="work">
+        <div class="work-container">
+          <!-- <h1>My Work</h1> -->
+          <div class="mywork-grid">
+            <!-- Grid item 5 -->
+            <div class="mywork-grid__item">
+              <div class="item-image">
+                <img
+                  src="./img/flixit-angular-16:10.png"
+                  alt="placeholder-app-screenshot"
+                  width="100%"
+                />
+              </div>
+              <div class="item-text">
+                <h2>Flixit Angular</h2>
+                <p>
+                  Flixit Angular is a fresh interpretation of the original
+                  Flixit App frontend, crafted with Angular and TypeScript. It
+                  utilizes Angular Router and RxJS for seamless navigation and
+                  responsive programming, respectively. With a user interface
+                  designed using Angular Material, the app conforms to Google's
+                  Material Design principles, ensuring an intuitive and visually
+                  appealing user experience.
+                </p>
+                <div>
+                  <a
+                    href="#"
+                    target="https://marcomarchionni.github.io/flixit-angular-client/"
+                    >Live App</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    target="https://github.com/marcomarchionni/flixit-angular-client"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Grid item 2 -->
+            <div class="mywork-grid__item">
+              <div class="item-image">
+                <img
+                  src="./img/flixit-app-screenshot-16:10.png"
+                  alt="flixit-app-screenshot"
+                  width="100%"
+                />
+              </div>
+              <div class="item-text">
+                <h2>FlixIt</h2>
+                <p>
+                  Flixit is a full-stack web application that provides
+                  information about movies from the Golden Age of Italian Cinema
+                  (1960-1980). The frontend is built with React.js and
+                  Typescript and employs technologies such as React Router,
+                  React Bootstrap, and React Redux. The backend is built with
+                  Node.js and Express and is connected to a MongoDB Atlas cloud
+                  database.
+                </p>
+                <div>
+                  <a href="https://flix-it.netlify.app/" target="_blank"
+                    >Live App</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/marcomarchionni/itflix-client"
+                    target="_blank"
+                    >Github Repo (Frontend)</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/marcomarchionni/movie-api"
+                    target="_blank"
+                    >Github Repo (Backend)</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Grid item 1 -->
+            <div class="mywork-grid__item">
+              <div class="item-image">
+                <img
+                  src="./img/meet-app-screenshot-16:10.png"
+                  alt="meet-app-screenshot"
+                  width="100%"
+                />
+              </div>
+              <div class="item-text">
+                <h2>Meet</h2>
+                <p>
+                  Meet is a serverless, progressive web application (PWA) that
+                  displays a given number of events filtered by city. The
+                  application is developed using React and a test-driven
+                  development (TDD) approach. It utilizes the Google Calendar
+                  API to fetch events from a sample calendar account, with the
+                  authorization process handled by AWS Lambda functions. Meet
+                  can be installed on both desktop and mobile devices and has
+                  the capability to work offline by using cached data.
+                </p>
+                <div>
+                  <a
+                    href="https://marcomarchionni.github.io/meet/"
+                    target="_blank"
+                    >Live App</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/marcomarchionni/meet"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Grid item 3 -->
+            <div class="mywork-grid__item">
+              <div class="item-image">
+                <img
+                  src="./img/chat-screenshots-16:10.png"
+                  alt="chat-app-screenshots"
+                  width="100%"
+                />
+              </div>
+              <div class="item-text">
+                <h2>Chat App</h2>
+                <p>
+                  The Chat App allows users to enter a chat room, exchange
+                  messages with other users, share locations and images, and
+                  read messages offline. It is also compatible with a screen
+                  reader for users with visual impairments. It is build using
+                  Expo, React Native and Firebase. Chat funcionalities are
+                  provided by
+                  <a
+                    href="https://github.com/FaridSafi/react-native-gifted-chat"
+                    target="_blank"
+                    >Gifted Chat</a
+                  >, a popular and highly customizable React Native library for
+                  mobile chat applications.
+                </p>
+                <div>
+                  <a
+                    href="https://github.com/marcomarchionni/chat-demo"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Grid item 4 -->
+            <div class="mywork-grid__item">
+              <div class="item-image">
+                <img
+                  src="./img/pokedex-app-screenshot-16:10.png"
+                  alt="pokedex-app-screenshot"
+                  width="100%"
+                />
+              </div>
+              <div class="item-text">
+                <h2>Pokédex</h2>
+                <p>
+                  The Pokédex App is a web application that enables users to
+                  view detailed information about a variety of Pokémons. The app
+                  retrieves Pokémons' details from
+                  <a href="https://pokeapi.co/">PokéAPI</a>, a popular and free
+                  educational API. It is built using HTML, CSS, and JavaScript,
+                  and makes use of jQuery 3.6.3 and Bootstrap 5.3.0.
+                </p>
+                <div>
+                  <a
+                    href="https://marcomarchionni.github.io/pokedex-app/"
+                    target="_blank"
+                    >Live App</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/marcomarchionni/pokedex-app"
+                    target="_blank"
+                    >Github Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Grid item 6 -->
+            <div class="mywork-grid__item">
+              <div class="item-image">
+                <img
+                  src="./img/placeholder-16:10.png"
+                  alt="placeholder-app-screenshot"
+                  width="100%"
+                />
+              </div>
+              <div class="item-text">
+                <h2>Project Title 5</h2>
+                <p>
+                  Here is a brief description of the project, the stack I used,
+                  etc. Below I add a link to the code.
+                </p>
+                <div>
+                  <a href="#" target="_blank">Live App</a>
+                </div>
+                <div>
+                  <a href="#" target="_blank">Github Repo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container contact-container">
+          <div class="contact-address">
+            <h2>Address</h2>
+            <p>
+              via Alfonso Marchesani 56<br />
+              66054 Vasto Marina (CH)<br />
+              ITALY
+            </p>
+          </div>
+          <div class="contact-social">
+            <h2>Find me on</h2>
+            <div class="social-media page-footer__item">
+              <a
+                href="https://www.linkedin.com/in/marco-marchionni-50886a241/"
+                target="_blank"
+                ><img src="img/linkedin-logo.svg" alt="linkedin logo"
+              /></a>
+              <a href="https://github.com/marcomarchionni" target="_blank"
+                ><img src="img/github-logo.svg" alt="github logo"
+              /></a>
+              <a
+                href="https://stackoverflow.com/users/2864211/marcomk"
+                target="_blank"
+                ><img src="img/stackoverflow-logo.svg" alt="stackoverflow logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <!-- Footer with social media links -->
-    <footer class="page-footer">
-      <p class="page-footer__item">Find me on</p>
-      <!-- Social icons -->
-      <div class="social-media page-footer__item">
-        <a
-          href="https://www.linkedin.com/in/marco-marchionni-50886a241/"
-          target="_blank"
-          ><img src="img/linkedin-logo.svg" alt="linkedin logo"
-        /></a>
-        <a href="https://github.com/marcomarchionni" target="_blank"
-          ><img src="img/github-logo.svg" alt="github logo"
-        /></a>
-        <a
-          href="https://stackoverflow.com/users/2864211/marcomk"
-          target="_blank"
-          ><img src="img/stackoverflow-logo.svg" alt="stackoverflow logo"
-        /></a>
-      </div>
-    </footer>
+    <script src="js/script.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";

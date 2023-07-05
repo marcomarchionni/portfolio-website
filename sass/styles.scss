@@ -1,0 +1,176 @@
+@use "_variables";
+
+@use "_typography";
+
+@use "_buttons";
+
+@use "_forms";
+
+@use "_menu";
+
+@mixin container() {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media all and (max-width: 1200px) {
+    width: 90%;
+  }
+
+  @media all and (max-width: 576px) {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@mixin section-container() {
+  @include container();
+  padding-top: 2rem;
+}
+
+/* 1 GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: var(--border);
+  scroll-margin-top: 52px;
+}
+
+/* 2. HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg-color);
+  border-bottom: var(--border);
+}
+
+.header-container {
+  @include container();
+  flex-direction: row;
+}
+
+.main-title {
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+.nav-container {
+  flex: 1 0 40px;
+  text-align: right;
+}
+
+/* 3 HOME */
+
+#home {
+  background-image: url("../img/hero-4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 40%;
+  position: relative;
+}
+
+.home-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 2rem;
+  right: 15%;
+  width: 35%;
+  text-align: right;
+  padding-right: 1rem;
+  color: #ebeaea;
+}
+
+/* 4 ABOUT */
+
+.about-container {
+  @include container();
+}
+
+.about-boat {
+  width: 400px;
+  text-align: center;
+}
+
+.about-boat__caption {
+  position: relative;
+  top: -60px;
+}
+
+/* 5 WORK */
+
+#work {
+  background-color: #ebeaea;
+}
+
+.work-container {
+  @include container();
+}
+
+.mywork-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media all and (max-width: 576px) {
+  .mywork-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.mywork-grid__item {
+  border: var(--border);
+  background-color: white;
+}
+
+.item-image {
+  padding: 1px;
+}
+
+.item-text {
+  padding: 1.5rem;
+}
+
+/* 6 CONTACT */
+
+#contact {
+  background-color: #640304;
+  color: #ebeaea;
+}
+
+.contact-container {
+  display: flex;
+  align-items: start;
+}
+
+.contact-address {
+  flex: 1 1 0;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .page-footer__item:first-child {
+    margin: 10px 0px;
+  } */
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
