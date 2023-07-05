@@ -56,39 +56,84 @@ section {
 .header-container {
   @include container();
   flex-direction: row;
+
+  @media all and (max-width: 576px) {
+    flex-direction: column;
+  }
 }
 
 .main-title {
-  font-size: 28px;
-  color: var(--primary-color);
-}
-
-.nav-container {
-  flex: 1 0 40px;
-  text-align: right;
+  h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+    @media all and (max-width: 576px) {
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 /* 3 HOME */
 
 #home {
-  background-image: url("../img/hero-4.jpg");
+  background-image: url("../img/hero-5.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   padding-top: 40%;
   position: relative;
+
+  @media all and (max-width: 576px) {
+    padding-top: 60%;
+    background-position: 60% 50%;
+  }
 }
 
-.home-text {
-  background-color: rgba(0, 0, 0, 0.3);
+.home-caption {
+  background-color: var(--overlay);
   position: absolute;
   bottom: 2rem;
   right: 15%;
   width: 35%;
   text-align: right;
-  padding-right: 1rem;
-  color: #ebeaea;
+  padding: 1rem;
+  color: var(--light-text-color);
+
+  h1 {
+    font-size: 48px;
+  }
+
+  @media all and (max-width: 1400px) {
+    width: 70%;
+  }
+
+  @media all and (max-width: 1200px) {
+    right: 5%;
+    width: 90%;
+    bottom: 1rem;
+  }
+
+  @media all and (max-width: 992px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    h1 {
+      font-size: 28px;
+    }
+  }
 }
 
 /* 4 ABOUT */
@@ -146,13 +191,13 @@ section {
 /* 6 CONTACT */
 
 #contact {
-  background-color: #640304;
-  color: #ebeaea;
+  background-color: var(--darker-primary-color);
+  color: var(--light-text-color);
 }
 
 .contact-container {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .contact-address {

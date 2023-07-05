@@ -1,13 +1,14 @@
 :root {
   --primary-color: #840014;
-  --primary-color-old: #640304;
+  --darker-primary-color: #640304;
   --lighter-primary-color: #963b61;
   --secondary-color: #2b2b2b;
   --lighter-secondary-color: #959595;
   --dark-text-color: #2b2b2b;
-  --light-text-color: white;
+  --light-text-color: #ebeaea;
   --bg-color: white;
   --darker-bg-color: #ebeaea;
   --bg-red: #840014;
   --border: 1px solid var(--primary-color);
+  --overlay: rgba(0, 0, 0, 0.3);
 }
