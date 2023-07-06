@@ -8,6 +8,8 @@
 
 @use "_menu";
 
+@use "_media-queries" as *;
+
 @mixin container() {
   width: 70%;
   margin: auto;
@@ -15,11 +17,11 @@
   flex-direction: column;
   align-items: center;
 
-  @media all and (max-width: 1200px) {
+  @include large() {
     width: 90%;
   }
 
-  @media all and (max-width: 576px) {
+  @include xsmall() {
     width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -40,7 +42,7 @@
 section {
   border-bottom: var(--border);
   scroll-margin-top: var(--header-offset);
-  @media all and (max-width: 576px) {
+  @include xsmall() {
     scroll-margin-top: var(--mobile-header-offset);
   }
 }
@@ -59,14 +61,14 @@ section {
   @include container();
   flex-direction: row;
 
-  @media all and (max-width: 576px) {
+  @include xsmall() {
     flex-direction: column;
   }
 }
 
 .main-title {
   h1 {
-    @media all and (max-width: 576px) {
+    @include xsmall() {
       font-size: 24px;
       margin-bottom: 0.5rem;
     }
@@ -84,7 +86,7 @@ section {
   padding-top: 40%;
   position: relative;
 
-  @media all and (max-width: 768px) {
+  @include small() {
     padding-top: 60%;
     background-position: 60% 50%;
   }
@@ -100,17 +102,17 @@ section {
   padding: 1rem;
   color: var(--light-text-color);
 
-  @media all and (max-width: 1400px) {
+  @include xlarge() {
     width: 70%;
   }
 
-  @media all and (max-width: 1200px) {
+  @include large() {
     right: 5%;
     width: 90%;
     bottom: 1rem;
   }
 
-  @media all and (max-width: 576px) {
+  @include xsmall() {
     width: 100%;
     left: 0;
     bottom: 0;
@@ -154,7 +156,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  @media all and (max-width: 768px) {
+  @include small() {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
@@ -187,7 +189,7 @@ section {
   p {
     margin: 0.25rem 0;
   }
-  @media all and (max-width: 992px) {
+  @include medium() {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
