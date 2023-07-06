@@ -22,14 +22,14 @@ a.button:focus {
   opacity: 0.8;
 }
 
-.button__primary,
-a.button__primary {
+.button-primary,
+a.button-primary {
   background-color: var(--primary-color);
   color: var(--light-text-color);
 }
 
-.button__secondary,
-a.button__secondary {
+.button-secondary,
+a.button-secondary {
   background-color: var(--secondary-color);
   color: var(--light-text-color);
 }

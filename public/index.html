@@ -26,7 +26,7 @@
 
   <body>
     <!-- Header with logo and main menu -->
-    <header class="header">
+    <header id="header">
       <div class="header-container">
         <div class="main-title">
           <h1>MARCO MARCHIONNI</h1>
@@ -75,28 +75,44 @@
       <section id="about">
         <div class="about-container">
           <div class="about-text">
+            <h4>About</h4>
             <p>
               I’m a full-stack developer with a diverse background and
-              wide-ranging interests. As a screenwriter, I’ve learned that
-              creativity thrives when combined with careful planning, solid
-              architecture, and continuous rewriting. As a TV producer, I’ve
-              successfully reconciled conflicting perspectives and overcome last
-              minute challenges. My experience as a stock and option trader has
-              sharpened my self-discipline and forward thinking. In order to
-              enhance my decision making process, I started developing my own
-              software tools and exploring professional solutions and innovative
-              technologies. Now I'm excited to bring this unique blend of
-              creativity, technical expertise, and disciplined thinking to the
-              world of software development. I’m eager to collaborate with
-              talented individuals, pooling our skills and knowledge to achieve
-              results we can truly be proud of.
+              wide-ranging interests.
             </p>
             <p>
-              I practice kung fu and I enjoy the sea in any season of the year.
+              As a <b>screenwriter</b>, I’ve learned that creativity thrives
+              when combined with careful planning, solid architecture, and
+              continuous rewriting.
+            </p>
+            <p>
+              As a <b>TV producer</b>, I’ve successfully reconciled conflicting
+              perspectives and overcome last minute challenges.
+            </p>
+            <p>
+              As a <b>stock and option trader</b>, I sharpened my
+              self-discipline and forward thinking.
+            </p>
+            <p>
+              In order to enhance my trading experience, I started developing my
+              own software tools and exploring innovative technologies. Now I'm
+              willing to develop better products and solutions and I’m eager to
+              collaborate with talented individuals to achieve results we can
+              truly be proud of.
+            </p>
+            <p>
+              Beyond work, I practise kung fu and I enjoy the sea in any season
+              of the year.
             </p>
             <br />
             <div class="cv-download">
-              <a href="files/cv.pdf" target="_blank" download>Download My CV</a>
+              <a
+                class="button button-primary"
+                href="files/cv.pdf"
+                target="_blank"
+                download
+                >Download CV</a
+              >
             </div>
           </div>
           <div class="about-boat">
@@ -111,10 +127,31 @@
       </section>
       <section id="work">
         <div class="work-container">
-          <!-- <h1>My Work</h1> -->
-          <div class="mywork-grid">
+          <div class="work-text">
+            <h4>Work</h4>
+            <p>
+              I'm currently working on a comprehensive portfolio management tool
+              which connects with an
+              <a href="https://www.interactivebrokers.com/en/home.php"
+                >Interactive Brokers</a
+              >
+              trading account. Additionally, I have a collection of study
+              projects completed as part of the
+              <a
+                href="https://careerfoundry.com/en/courses/become-a-web-developer/"
+                >CareerFoundry full-stack development</a
+              >
+              program.
+            </p>
+            <p>
+              For other minor projects, feel free to explore my
+              <a href="https://github.com/marcomarchionni">Github repository</a
+              >.
+            </p>
+          </div>
+          <div class="work-grid">
             <!-- Grid item 5 -->
-            <div class="mywork-grid__item">
+            <div class="work-grid__item">
               <div class="item-image">
                 <img
                   src="./img/flixit-angular-16:10.png"
@@ -150,7 +187,7 @@
               </div>
             </div>
             <!-- Grid item 2 -->
-            <div class="mywork-grid__item">
+            <div class="work-grid__item">
               <div class="item-image">
                 <img
                   src="./img/flixit-app-screenshot-16:10.png"
@@ -191,7 +228,7 @@
               </div>
             </div>
             <!-- Grid item 1 -->
-            <div class="mywork-grid__item">
+            <div class="work-grid__item">
               <div class="item-image">
                 <img
                   src="./img/meet-app-screenshot-16:10.png"
@@ -228,7 +265,7 @@
               </div>
             </div>
             <!-- Grid item 3 -->
-            <div class="mywork-grid__item">
+            <div class="work-grid__item">
               <div class="item-image">
                 <img
                   src="./img/chat-screenshots-16:10.png"
@@ -262,7 +299,7 @@
               </div>
             </div>
             <!-- Grid item 4 -->
-            <div class="mywork-grid__item">
+            <div class="work-grid__item">
               <div class="item-image">
                 <img
                   src="./img/pokedex-app-screenshot-16:10.png"
@@ -297,7 +334,7 @@
               </div>
             </div>
             <!-- Grid item 6 -->
-            <div class="mywork-grid__item">
+            <div class="work-grid__item">
               <div class="item-image">
                 <img
                   src="./img/placeholder-16:10.png"
@@ -323,9 +360,9 @@
         </div>
       </section>
       <section id="contact">
-        <div class="container contact-container">
+        <div class="contact-container">
           <div class="contact-address">
-            <h2>Address</h2>
+            <h5>Address</h5>
             <p>
               via Alfonso Marchesani 56<br />
               66054 Vasto Marina (CH)<br />
@@ -333,8 +370,8 @@
             </p>
           </div>
           <div class="contact-social">
-            <h2>Find me on</h2>
-            <div class="social-media page-footer__item">
+            <h5>Find me on</h5>
+            <div>
               <a
                 href="https://www.linkedin.com/in/marco-marchionni-50886a241/"
                 target="_blank"
@@ -349,6 +386,10 @@
                 ><img src="img/stackoverflow-logo.svg" alt="stackoverflow logo"
               /></a>
             </div>
+          </div>
+          <div class="contact-email">
+            <h5>Email</h5>
+            <p>code@marcomarchionni.com</p>
           </div>
         </div>
       </section>

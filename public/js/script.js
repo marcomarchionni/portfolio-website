@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function scrolledToBottom() {
     var pixelsToBottom =
       document.body.offsetHeight - window.innerHeight - window.scrollY;
-    return pixelsToBottom <= 0;
+    return pixelsToBottom < 1;
   }
 
   function setActiveMenu() {

@@ -7,8 +7,12 @@
   --dark-text-color: #2b2b2b;
   --light-text-color: #ebeaea;
   --bg-color: white;
-  --darker-bg-color: #ebeaea;
-  --bg-red: #840014;
-  --border: 1px solid var(--primary-color);
+  --gray-bg-color: #ebeaea;
+  --red-bg-color: #640304;
   --overlay: rgba(0, 0, 0, 0.3);
+
+  --border: 1px solid var(--primary-color);
+
+  --header-offset: 44px;
+  --mobile-header-offset: 76px;
 }

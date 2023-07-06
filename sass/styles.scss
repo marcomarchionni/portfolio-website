@@ -38,14 +38,17 @@
 }
 
 section {
-  padding: 3rem 0;
+  // padding: 1rem 0;
   border-bottom: var(--border);
-  scroll-margin-top: 52px;
+  scroll-margin-top: var(--header-offset);
+  @media all and (max-width: 576px) {
+    scroll-margin-top: var(--mobile-header-offset);
+  }
 }
 
 /* 2. HEADER */
 
-.header {
+#header {
   position: sticky;
   top: 0;
   z-index: 10;
@@ -145,77 +148,81 @@ section {
 .about-boat {
   width: 400px;
   text-align: center;
+
+  .about-boat__caption {
+    position: relative;
+    top: -60px;
+  }
 }
 
-.about-boat__caption {
-  position: relative;
-  top: -60px;
+.cv-download {
+  text-align: center;
 }
 
 /* 5 WORK */
 
 #work {
-  background-color: #ebeaea;
+  background-color: var(--gray-bg-color);
 }
 
 .work-container {
   @include container();
+  gap: 3rem;
+  padding-bottom: 3rem;
 }
 
-.mywork-grid {
+.work-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-@media all and (max-width: 576px) {
-  .mywork-grid {
+  gap: 1rem;
+  @media all and (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0.5rem;
   }
 }
 
-.mywork-grid__item {
+.work-grid__item {
   border: var(--border);
-  background-color: white;
-}
-
-.item-image {
-  padding: 1px;
-}
-
-.item-text {
-  padding: 1.5rem;
+  background-color: var(--bg-color);
+  .item-image {
+    padding: 1px;
+  }
+  .item-text {
+    padding: 1.5rem;
+  }
 }
 
 /* 6 CONTACT */
 
 #contact {
-  background-color: var(--darker-primary-color);
+  background-color: var(--red-bg-color);
   color: var(--light-text-color);
 }
 
 .contact-container {
-  display: flex;
+  @include container();
+  flex-direction: row;
   align-items: flex-start;
-}
-
-.contact-address {
-  flex: 1 1 0;
+  justify-content: space-around;
+  padding: 3rem 0;
+  p {
+    margin: 0.25rem 0;
+  }
+  @media all and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 .contact-social {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* .page-footer__item:first-child {
-    margin: 10px 0px;
-  } */
-
-.social-media img {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
+  img {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem 0.25rem;
+    color: var(--light-text-color);
+  }
 }

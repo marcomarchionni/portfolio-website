@@ -1,6 +1,3 @@
-// .nav-container {
-//   width: 100%;
-// }
 .main-menu {
   flex: 1 0 0;
   text-align: right;
@@ -8,160 +5,19 @@
     width: 100%;
     text-align: center;
   }
-}
-
-.main-menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end;
-  gap: 3%;
-  @media all and (max-width: 576px) {
-    justify-content: space-around;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3%;
+    @media all and (max-width: 576px) {
+      justify-content: space-around;
+    }
   }
 }
 
 .main-menu__item.active {
   text-decoration: none;
 }
-
-.hamburger,
-.sidebar-menu,
-#hamburger-input {
-  display: none;
-}
-
-/* 2.2.2 Mobile Menu */
-/* 2.2.2.1 Sidebar Hidden */
-
-// @media screen and (max-width: 650px) {
-//   .main-menu {
-//     display: none;
-//   }
-
-//   .nav-container {
-//     position: relative;
-//   }
-
-//   #hamburger-input,
-//   .hamburger {
-//     width: 30px;
-//     height: 24px;
-//     display: block;
-//     position: absolute;
-//     right: 0px;
-//     top: 50%;
-//     margin: -12px 0px 5px 5px;
-//   }
-
-//   #hamburger-input {
-//     cursor: pointer;
-//     z-index: 5;
-//     opacity: 0;
-//   }
-
-//   .hamburger {
-//     z-index: 4;
-//     border: none;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//   }
-
-//   .hamburger__line {
-//     display: block;
-//     height: 4px;
-//     width: 100%;
-//     background-color: var(--primary-color);
-//     box-shadow: 0 0 1px 0px var(--bg-color) inset;
-//   }
-
-//   .hamburger__line1 {
-//     transform-origin: 0% 0%;
-//     transition: transform 0.4s ease-in-out;
-//   }
-
-//   .hamburger__line2 {
-//     transition: transform 0.2s ease-in-out;
-//   }
-
-//   .hamburger__line3 {
-//     transform-origin: 0% 100%;
-//     transition: transform 0.4s ease-in-out;
-//   }
-
-//   .sidebar-menu {
-//     display: block;
-//     visibility: visible;
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     width: 200px;
-//     height: 100%;
-//     transform: translate(150%);
-//     transition: transform 0.5s ease-in-out;
-//     background-color: var(--darker-bg-color);
-//     z-index: 2;
-//   }
-
-//   .sidebar-menu ul {
-//     list-style-type: none;
-//     margin-top: 100px;
-//     text-align: center;
-//     padding: 0px;
-//   }
-
-//   .sidebar-menu li {
-//     width: 100%;
-//     line-height: 3;
-//     border-bottom: 1px solid var(--light-text-color);
-//   }
-
-//   .sidebar-menu li:first-child {
-//     border-top: 1px solid var(--light-text-color);
-//   }
-
-//   .sidebar-menu a {
-//     text-decoration: none;
-//     padding: 10px 50px;
-//   }
-
-//   .overlay {
-//     display: block;
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0;
-//     visibility: hidden;
-//     transition: opacity 0.5s, visibility 0.5s;
-//     overflow: hidden;
-//     background: black;
-//     z-index: 1;
-//   }
-
-//   /* 2.2.2.2 Sidebar Visible */
-
-//   .nav-container #hamburger-input:checked ~ .hamburger .hamburger__line1 {
-//     transform: rotate(45deg);
-//   }
-
-//   .nav-container #hamburger-input:checked ~ .hamburger .hamburger__line2 {
-//     transform: scaleY(0);
-//   }
-
-//   .nav-container #hamburger-input:checked ~ .hamburger .hamburger__line3 {
-//     transform: rotate(-45deg);
-//   }
-
-//   .nav-container #hamburger-input:checked ~ .sidebar-menu {
-//     transform: translateX(0);
-//   }
-
-//   #hamburger-input:checked ~ .overlay {
-//     visibility: visible;
-//     opacity: 0.4;
-//   }
-// }
