@@ -27,7 +27,8 @@ html {
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 28px;
+  color: var(--primary-color);
   margin: 0.25rem 0;
   line-height: 1.2;
 }
@@ -35,8 +36,19 @@ h1 {
 h2 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  margin: 0.5rem 0;
+  font-size: 48px;
+  line-height: 110%;
+  margin: 0;
+}
+@media all and (max-width: 992px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media all and (max-width: 576px) {
+  h2 {
+    font-size: 28px;
+  }
 }
 
 h3 {
@@ -61,6 +73,13 @@ h5 {
   font-size: 1.4rem;
   margin: 0.25rem 0;
   text-align: center;
+}
+
+h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 1rem 0;
 }
 
 p {
@@ -205,10 +224,6 @@ section {
   }
 }
 
-.main-title h1 {
-  font-size: 28px;
-  color: var(--primary-color);
-}
 @media all and (max-width: 576px) {
   .main-title h1 {
     font-size: 24px;
@@ -226,7 +241,7 @@ section {
   padding-top: 40%;
   position: relative;
 }
-@media all and (max-width: 576px) {
+@media all and (max-width: 768px) {
   #home {
     padding-top: 60%;
     background-position: 60% 50%;
@@ -243,9 +258,6 @@ section {
   padding: 1rem;
   color: var(--light-text-color);
 }
-.home-caption h1 {
-  font-size: 48px;
-}
 @media all and (max-width: 1400px) {
   .home-caption {
     width: 70%;
@@ -258,24 +270,12 @@ section {
     bottom: 1rem;
   }
 }
-@media all and (max-width: 992px) {
-  .home-caption h1 {
-    font-size: 40px;
-  }
-}
-@media all and (max-width: 768px) {
-  .home-caption h1 {
-    font-size: 32px;
-  }
-}
 @media all and (max-width: 576px) {
   .home-caption {
     width: 100%;
     left: 0;
     bottom: 0;
-  }
-  .home-caption h1 {
-    font-size: 28px;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -313,12 +313,12 @@ section {
   text-align: center;
 }
 
-/* 5 WORK */
-#work {
+/* 5 Code */
+#code {
   background-color: var(--gray-bg-color);
 }
 
-.work-container {
+.code-container {
   width: 70%;
   margin: auto;
   display: flex;
@@ -328,38 +328,38 @@ section {
   padding-bottom: 3rem;
 }
 @media all and (max-width: 1200px) {
-  .work-container {
+  .code-container {
     width: 90%;
   }
 }
 @media all and (max-width: 576px) {
-  .work-container {
+  .code-container {
     width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
 
-.work-grid {
+.code-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 @media all and (max-width: 768px) {
-  .work-grid {
+  .code-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 }
 
-.work-grid__item {
+.code-grid__item {
   border: var(--border);
   background-color: var(--bg-color);
 }
-.work-grid__item .item-image {
+.code-grid__item .item-image {
   padding: 1px;
 }
-.work-grid__item .item-text {
+.code-grid__item .item-text {
   padding: 1.5rem;
 }
 

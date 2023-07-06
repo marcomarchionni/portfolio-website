@@ -14,15 +14,26 @@ html {
 
 h1 {
   @include oswald();
-  font-size: 40px;
+  font-size: 28px;
+  color: var(--primary-color);
   margin: 0.25rem 0;
   line-height: 1.2;
 }
 
 h2 {
   @include oswald();
-  font-size: 20px;
-  margin: 0.5rem 0;
+  font-size: 48px;
+  line-height: 110%;
+  margin: 0;
+  @media all and (max-width: 992px) {
+    font-size: 40px;
+  }
+  // @media all and (max-width: 768px) {
+  //   font-size: 32px;
+  // }
+  @media all and (max-width: 576px) {
+    font-size: 28px;
+  }
 }
 
 h3 {
@@ -44,6 +55,12 @@ h5 {
   font-size: 1.4rem;
   margin: 0.25rem 0;
   text-align: center;
+}
+
+h6 {
+  @include oswald();
+  font-size: 1.4rem;
+  margin: 1rem 0;
 }
 
 p {
