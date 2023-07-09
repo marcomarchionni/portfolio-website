@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // get menu items and section elements
   var sections = document.querySelectorAll("section");
   var menuItems = document.querySelectorAll(".main-menu__item");
+  var hamburgerMenu = document.querySelector(".hamburger");
   var lastMenuItemIndex = menuItems.length - 1;
 
   menuItems.forEach((item) => item.addEventListener("click", onMenuClick));
+  hamburgerMenu.addEventListener("click", onMobileMenuClick);
 
   // Init active menu
   setActiveMenu();
@@ -23,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function onMobileMenuClick(e) {
+    console.log("hamburger click");
+    hamburgerMenu.classList.add("open");
+  }
+
   function toggleActiveClass(index) {
     if (index != undefined) {
       menuItems.forEach((menuItem, i) => {
@@ -31,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           menuItem.classList.remove("active");
         }
-        console.log(`Menu${i}: ${menuItem.classList}`);
       });
     }
   }

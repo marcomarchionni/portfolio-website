@@ -1,0 +1,86 @@
+@use "_media-queries" as *;
+
+@mixin btn() {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  //   left: $left;
+  transition-duration: 0.5s;
+  //   border: 1px solid black;
+}
+
+@mixin meat($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: $top;
+  background-color: var(--primary-color);
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: var(--primary-color);
+  content: "";
+  top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: var(--primary-color);
+  content: "";
+  top: $top;
+}
+
+.hamburger {
+  display: none;
+
+  @include xsmall() {
+    @include btn();
+    .hamburger-square {
+      position: absolute;
+      top: 3px;
+      left: -1px;
+      height: 24px;
+      width: 28px;
+      border: 1px solid red;
+    }
+
+    .hamburger-icon {
+      @include meat(4px, 28px, 13px);
+
+      &:before {
+        @include icon-before(4px, 28px, -8px);
+      }
+
+      &:after {
+        @include icon-after(4px, 28px, 8px);
+      }
+    }
+
+    &.open {
+      .hamburger-icon {
+        transition-duration: 0.5s;
+        background: transparent;
+
+        &:before {
+          transform: rotateZ(40deg) scaleX(1.1) translate(4px, 7px);
+        }
+
+        &:after {
+          transform: rotateZ(-40deg) scaleX(1.1) translate(4px, -7px);
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

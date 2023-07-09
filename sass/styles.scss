@@ -8,6 +8,8 @@
 
 @use "_menu";
 
+@use "_mobile-menu";
+
 @use "_media-queries" as *;
 
 @mixin container() {
@@ -26,11 +28,6 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-}
-
-@mixin section-container() {
-  @include container();
-  padding-top: 2rem;
 }
 
 /* 1 GENERAL */
@@ -60,20 +57,17 @@ section {
 .header-container {
   @include container();
   flex-direction: row;
-
-  @include xsmall() {
-    flex-direction: column;
-  }
+  justify-content: space-between;
 }
 
-.main-title {
-  h1 {
-    @include xsmall() {
-      font-size: 24px;
-      margin-bottom: 0.5rem;
-    }
-  }
-}
+// .main-title {
+//   h1 {
+//     @include xsmall() {
+//       font-size: 24px;
+//       margin-bottom: 0.5rem;
+//     }
+//   }
+// }
 
 /* 3 HOME */
 

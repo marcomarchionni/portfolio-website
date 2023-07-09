@@ -156,12 +156,6 @@ a.button-secondary {
   flex: 1 0 0;
   text-align: right;
 }
-@media all and (max-width: 576px) {
-  .main-menu {
-    width: 100%;
-    text-align: center;
-  }
-}
 .main-menu ul {
   list-style-type: none;
   margin: 0;
@@ -175,9 +169,74 @@ a.button-secondary {
     justify-content: space-around;
   }
 }
+@media (max-width: 576px) {
+  .main-menu {
+    display: none;
+  }
+}
 
 .main-menu__item.active {
   text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 576px) {
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    transition-duration: 0.5s;
+  }
+  .hamburger .hamburger-square {
+    position: absolute;
+    top: 3px;
+    left: -1px;
+    height: 24px;
+    width: 28px;
+    border: 1px solid red;
+  }
+  .hamburger .hamburger-icon {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 4px;
+    width: 28px;
+    top: 13px;
+    background-color: var(--primary-color);
+  }
+  .hamburger .hamburger-icon:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    background-color: var(--primary-color);
+    content: "";
+    top: -8px;
+  }
+  .hamburger .hamburger-icon:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    background-color: var(--primary-color);
+    content: "";
+    top: 8px;
+  }
+  .hamburger.open .hamburger-icon {
+    transition-duration: 0.5s;
+    background: transparent;
+  }
+  .hamburger.open .hamburger-icon:before {
+    transform: rotateZ(40deg) scaleX(1.1) translate(4px, 7px);
+  }
+  .hamburger.open .hamburger-icon:after {
+    transform: rotateZ(-40deg) scaleX(1.1) translate(4px, -7px);
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
 }
 
 /* 1 GENERAL */
@@ -211,6 +270,7 @@ section {
   flex-direction: column;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
 }
 @media (max-width: 1200px) {
   .header-container {
@@ -222,18 +282,6 @@ section {
     width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
-}
-@media (max-width: 576px) {
-  .header-container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 576px) {
-  .main-title h1 {
-    font-size: 24px;
-    margin-bottom: 0.5rem;
   }
 }
 
