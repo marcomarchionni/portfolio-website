@@ -12,7 +12,7 @@
   --overlay: rgba(0, 0, 0, 0.3);
   --border: 1px solid var(--primary-color);
   --header-offset: 44px;
-  --mobile-header-offset: 76px;
+  --mobile-header-offset: 74px;
 }
 
 body,
