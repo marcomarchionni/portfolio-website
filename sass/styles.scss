@@ -4,8 +4,6 @@
 
 @use "_buttons";
 
-@use "_forms";
-
 @use "_menu";
 
 @use "_mobile-menu";
@@ -39,9 +37,6 @@
 section {
   border-bottom: var(--border);
   scroll-margin-top: var(--header-offset);
-  @include xsmall() {
-    scroll-margin-top: var(--mobile-header-offset);
-  }
 }
 
 /* 2. HEADER */
@@ -60,19 +55,10 @@ section {
   justify-content: space-between;
 }
 
-// .main-title {
-//   h1 {
-//     @include xsmall() {
-//       font-size: 24px;
-//       margin-bottom: 0.5rem;
-//     }
-//   }
-// }
-
 /* 3 HOME */
 
 #home {
-  background-image: url("../img/hero-5.jpg");
+  background-image: url("../img/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,6 +69,11 @@ section {
   @include small() {
     padding-top: 60%;
     background-position: 60% 50%;
+  }
+
+  @include xsmall() {
+    padding-top: 70%;
+    background-position: 70% 30%;
   }
 }
 
@@ -123,6 +114,9 @@ section {
 .about-boat {
   width: 400px;
   text-align: center;
+  @include xsmall {
+    width: 300px;
+  }
 
   .about-boat__caption {
     position: relative;
@@ -180,8 +174,10 @@ section {
   align-items: flex-start;
   justify-content: space-around;
   padding: 3rem 0;
-  p {
+  p,
+  address {
     margin: 0.25rem 0;
+    font-style: normal;
   }
   @include medium() {
     flex-direction: column;

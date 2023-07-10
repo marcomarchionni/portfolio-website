@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Marco Marchionni - Full Stack Developer"
+    />
     <title>Home</title>
     <link
       rel="shortcut icon"
@@ -59,11 +63,39 @@
             </li>
           </ul>
         </nav>
-        <div class="hamburger">
-          <!-- <div class="hamburger-square"></div> -->
+        <div class="mobile-menu-button" role="button">
           <div class="hamburger-icon"></div>
         </div>
       </div>
+      <nav class="mobile-menu">
+        <ul role="menubar">
+          <li>
+            <a role="menuitem" href="#home" class="mobile-menu__item"
+              ><h3>Home</h3></a
+            >
+          </li>
+          <li>
+            <a
+              role="menuitem"
+              href="#about"
+              aria-label="About me"
+              class="mobile-menu__item"
+              ><h3>About</h3></a
+            >
+          </li>
+          <li>
+            <a role="menuitem" href="#code" class="mobile-menu__item"
+              ><h3>Code</h3></a
+            >
+          </li>
+          <li>
+            <a role="menuitem" href="#contact" class="mobile-menu__item"
+              ><h3>Contact</h3></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-overlay"></div>
     </header>
 
     <!-- Main content -->
@@ -121,7 +153,7 @@
           </div>
           <div class="about-boat">
             <object data="img/boat.svg" type="image/svg+xml">
-              <!-- Fallback content goes here, for browsers that don't support SVGs -->
+              <img src="img/boat.png" alt="A sailing boat" />
             </object>
             <a href="http://www.freepik.com" class="about-boat__caption"
               ><small>Designed by rawpixel.com / Freepik</small></a
@@ -176,15 +208,15 @@
                 </p>
                 <div>
                   <a
-                    href="#"
-                    target="https://marcomarchionni.github.io/flixit-angular-client/"
+                    href="https://marcomarchionni.github.io/flixit-angular-client/"
+                    target="_blank"
                     >Live App</a
                   >
                 </div>
                 <div>
                   <a
-                    href="#"
-                    target="https://github.com/marcomarchionni/flixit-angular-client"
+                    href="https://github.com/marcomarchionni/flixit-angular-client"
+                    target="_blank"
                     >Github Repo</a
                   >
                 </div>
@@ -367,11 +399,11 @@
         <div class="contact-container">
           <div class="contact-address">
             <h5>Address</h5>
-            <p>
+            <address>
               via Alfonso Marchesani 56<br />
               66054 Vasto Marina (CH)<br />
               ITALY
-            </p>
+            </address>
           </div>
           <div class="contact-social">
             <h5>Find me on</h5>

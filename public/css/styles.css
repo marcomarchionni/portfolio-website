@@ -12,7 +12,6 @@
   --overlay: rgba(0, 0, 0, 0.3);
   --border: 1px solid var(--primary-color);
   --header-offset: 44px;
-  --mobile-header-offset: 74px;
 }
 
 body,
@@ -142,16 +141,6 @@ a.button-secondary {
   color: var(--light-text-color);
 }
 
-.form-input {
-  border: 1px solid var(--lighter-secondary-color);
-  border-radius: 3px;
-}
-
-.form-textarea {
-  resize: none;
-  height: 200px;
-}
-
 .main-menu {
   flex: 1 0 0;
   text-align: right;
@@ -179,26 +168,18 @@ a.button-secondary {
   text-decoration: none;
 }
 
-.hamburger {
+.mobile-menu-button {
   display: none;
 }
 @media (max-width: 576px) {
-  .hamburger {
+  .mobile-menu-button {
     display: block;
     position: relative;
     width: 28px;
     height: 28px;
     transition-duration: 0.5s;
   }
-  .hamburger .hamburger-square {
-    position: absolute;
-    top: 3px;
-    left: -1px;
-    height: 24px;
-    width: 28px;
-    border: 1px solid red;
-  }
-  .hamburger .hamburger-icon {
+  .mobile-menu-button .hamburger-icon {
     transition-duration: 0.5s;
     position: absolute;
     height: 4px;
@@ -206,37 +187,85 @@ a.button-secondary {
     top: 13px;
     background-color: var(--primary-color);
   }
-  .hamburger .hamburger-icon:before {
+  .mobile-menu-button .hamburger-icon:before {
     transition-duration: 0.5s;
     position: absolute;
-    width: 28px;
     height: 4px;
-    background-color: var(--primary-color);
-    content: "";
+    width: 28px;
     top: -8px;
-  }
-  .hamburger .hamburger-icon:after {
-    transition-duration: 0.5s;
-    position: absolute;
-    width: 28px;
-    height: 4px;
     background-color: var(--primary-color);
     content: "";
-    top: 8px;
   }
-  .hamburger.open .hamburger-icon {
+  .mobile-menu-button .hamburger-icon:after {
     transition-duration: 0.5s;
+    position: absolute;
+    height: 4px;
+    width: 28px;
+    top: 8px;
+    background-color: var(--primary-color);
+    content: "";
+  }
+  .mobile-menu-button.show-menu .hamburger-icon {
     background: transparent;
   }
-  .hamburger.open .hamburger-icon:before {
+  .mobile-menu-button.show-menu .hamburger-icon:before {
     transform: rotateZ(40deg) scaleX(1.1) translate(4px, 7px);
   }
-  .hamburger.open .hamburger-icon:after {
+  .mobile-menu-button.show-menu .hamburger-icon:after {
     transform: rotateZ(-40deg) scaleX(1.1) translate(4px, -7px);
   }
-  .hamburger:hover {
+  .mobile-menu-button:hover {
     cursor: pointer;
   }
+}
+
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 9;
+}
+.mobile-menu ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu li {
+  border: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mobile-menu li a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  width: 100%;
+  visibility: hidden;
+}
+.mobile-menu.show-menu li {
+  height: 2rem;
+  border-bottom: 1px solid var(--light-text-color);
+}
+.mobile-menu.show-menu li a {
+  visibility: visible;
+}
+
+.mobile-menu-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.mobile-menu-overlay.show-menu {
+  opacity: 0.5;
+  visibility: visible;
 }
 
 /* 1 GENERAL */
@@ -247,11 +276,6 @@ a.button-secondary {
 section {
   border-bottom: var(--border);
   scroll-margin-top: var(--header-offset);
-}
-@media (max-width: 576px) {
-  section {
-    scroll-margin-top: var(--mobile-header-offset);
-  }
 }
 
 /* 2. HEADER */
@@ -287,7 +311,7 @@ section {
 
 /* 3 HOME */
 #home {
-  background-image: url("../img/hero-5.jpg");
+  background-image: url("../img/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -299,6 +323,12 @@ section {
   #home {
     padding-top: 60%;
     background-position: 60% 50%;
+  }
+}
+@media (max-width: 576px) {
+  #home {
+    padding-top: 70%;
+    background-position: 70% 30%;
   }
 }
 
@@ -357,6 +387,11 @@ section {
 .about-boat {
   width: 400px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .about-boat {
+    width: 300px;
+  }
 }
 .about-boat .about-boat__caption {
   position: relative;
@@ -446,8 +481,10 @@ section {
     padding-right: 0.5rem;
   }
 }
-.contact-container p {
+.contact-container p,
+.contact-container address {
   margin: 0.25rem 0;
+  font-style: normal;
 }
 @media (max-width: 992px) {
   .contact-container {

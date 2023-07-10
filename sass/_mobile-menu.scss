@@ -5,9 +5,7 @@
   position: relative;
   width: 28px;
   height: 28px;
-  //   left: $left;
   transition-duration: 0.5s;
-  //   border: 1px solid black;
 }
 
 @mixin meat($height, $width, $top) {
@@ -19,55 +17,31 @@
   background-color: var(--primary-color);
 }
 
-@mixin icon-before($height, $width, $top) {
-  transition-duration: 0.5s;
-  position: absolute;
-  width: $width;
-  height: $height;
-  background-color: var(--primary-color);
+@mixin bread($height, $width, $top) {
+  @include meat($height, $width, $top);
   content: "";
-  top: $top;
 }
 
-@mixin icon-after($height, $width, $top) {
-  transition-duration: 0.5s;
-  position: absolute;
-  width: $width;
-  height: $height;
-  background-color: var(--primary-color);
-  content: "";
-  top: $top;
-}
-
-.hamburger {
+.mobile-menu-button {
   display: none;
 
   @include xsmall() {
     @include btn();
-    .hamburger-square {
-      position: absolute;
-      top: 3px;
-      left: -1px;
-      height: 24px;
-      width: 28px;
-      border: 1px solid red;
-    }
 
     .hamburger-icon {
       @include meat(4px, 28px, 13px);
 
       &:before {
-        @include icon-before(4px, 28px, -8px);
+        @include bread(4px, 28px, -8px);
       }
 
       &:after {
-        @include icon-after(4px, 28px, 8px);
+        @include bread(4px, 28px, 8px);
       }
     }
 
-    &.open {
+    &.show-menu {
       .hamburger-icon {
-        transition-duration: 0.5s;
         background: transparent;
 
         &:before {
@@ -82,5 +56,56 @@
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 9;
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    border: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    a {
+      color: var(--light-text-color);
+      text-decoration: none;
+      width: 100%;
+      visibility: hidden;
+    }
+  }
+  &.show-menu {
+    li {
+      height: 2rem;
+      border-bottom: 1px solid var(--light-text-color);
+      a {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.mobile-menu-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  transition: opacity 0.5s, visibility 0.5s;
+  &.show-menu {
+    opacity: 0.5;
+    visibility: visible;
   }
 }
