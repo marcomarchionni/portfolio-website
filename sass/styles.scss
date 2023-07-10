@@ -35,8 +35,8 @@
 }
 
 section {
-  border-bottom: var(--border);
-  scroll-margin-top: var(--header-offset);
+  border-bottom: $border;
+  scroll-margin-top: $header-offset;
 }
 
 /* 2. HEADER */
@@ -45,8 +45,8 @@ section {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--bg-color);
-  border-bottom: var(--border);
+  background-color: $bg-color;
+  border-bottom: $border;
 }
 
 .header-container {
@@ -78,14 +78,14 @@ section {
 }
 
 .home-caption {
-  background-color: var(--overlay);
+  background-color: $overlay;
   position: absolute;
   bottom: 2rem;
   right: 15%;
   width: 35%;
   text-align: right;
   padding: 1rem;
-  color: var(--light-text-color);
+  color: $light-text-color;
 
   @include xlarge() {
     width: 70%;
@@ -131,7 +131,7 @@ section {
 /* 5 Code */
 
 #code {
-  background-color: var(--gray-bg-color);
+  background-color: $gray-bg-color;
 }
 
 .code-container {
@@ -151,8 +151,8 @@ section {
 }
 
 .code-grid__item {
-  border: var(--border);
-  background-color: var(--bg-color);
+  border: $border;
+  background-color: $bg-color;
   .item-image {
     padding: 1px;
   }
@@ -164,8 +164,8 @@ section {
 /* 6 CONTACT */
 
 #contact {
-  background-color: var(--red-bg-color);
-  color: var(--light-text-color);
+  background-color: $red-bg-color;
+  color: $light-text-color;
 }
 
 .contact-container {
@@ -194,6 +194,6 @@ section {
     width: 40px;
     height: 40px;
     margin: 0.5rem 0.25rem;
-    color: var(--light-text-color);
+    color: $light-text-color;
   }
 }

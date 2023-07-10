@@ -8,7 +8,6 @@ a.button {
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  // border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.5s opacity;
 }
 
@@ -31,12 +30,12 @@ a.button:active {
 
 .button-primary,
 a.button-primary {
-  background-color: var(--primary-color);
-  color: var(--light-text-color);
+  background-color: $primary-color;
+  color: $light-text-color;
 }
 
 .button-secondary,
 a.button-secondary {
-  background-color: var(--secondary-color);
-  color: var(--light-text-color);
+  background-color: $secondary-color;
+  color: $light-text-color;
 }

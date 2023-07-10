@@ -11,16 +11,15 @@ html {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.5;
-  color: var(--dark-text-color);
+  color: $dark-text-color;
 }
 
 h1 {
   @include oswald();
   font-size: 28px;
-  color: var(--primary-color);
+  color: $primary-color;
   margin: 0.25rem 0;
   line-height: 1.2;
-  // border: 1px solid black;
 }
 
 h2 {
@@ -47,7 +46,7 @@ h4 {
   @include oswald();
   font-size: 1.8rem;
   margin: 3rem 0 1.5rem 0;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 h5 {
@@ -70,7 +69,7 @@ p {
 
 a:link,
 a:visited {
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 a:hover {
