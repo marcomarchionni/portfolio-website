@@ -98,7 +98,7 @@
 
 .mobile-menu-overlay {
   position: absolute;
-  height: 100vh;
+  height: calc(100vh - $header-offset);
   width: 100%;
   background: black;
   opacity: 0;
