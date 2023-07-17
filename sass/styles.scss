@@ -1,4 +1,4 @@
-@use "_variables";
+@use "_variables" as *;
 
 @use "_typography";
 
@@ -28,13 +28,21 @@
   }
 }
 
+@mixin stickyHeader() {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 /* 1 GENERAL */
 
 * {
   box-sizing: border-box;
+  overflow: auto;
 }
 
-section {
+section,
+footer {
   border-bottom: $border;
   scroll-margin-top: $header-offset;
 }
@@ -42,9 +50,7 @@ section {
 /* 2. HEADER */
 
 #header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  @include stickyHeader();
   background-color: $bg-color;
   border-bottom: $border;
 }
@@ -196,4 +202,71 @@ section {
     margin: 0.5rem 0.25rem;
     color: $light-text-color;
   }
+}
+
+/* Case Study */
+#case-study-header {
+  @include stickyHeader();
+  background-color: $primary-color;
+  a {
+    color: $light-text-color;
+    text-decoration: none;
+  }
+  h1 {
+    color: $light-text-color;
+  }
+  h6 {
+    color: $lighter-secondary-color;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+  }
+  @include xsmall() {
+    flex-direction: column;
+  }
+}
+
+.case-study-container {
+  @include container();
+  align-items: flex-start;
+  .centered-figure {
+    align-self: center;
+  }
+  .full-width-figure {
+    width: 100%;
+    margin: 0;
+  }
+  h4 {
+    margin: 6rem 0 1.5rem 0;
+    text-align: left;
+    &.paragraph-title {
+      font-size: 1.4rem;
+      margin: 2rem 0 0.5rem 0;
+    }
+    &.small-paragraph-title {
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+  }
+  ul {
+    margin-top: 0;
+  }
+  figcaption {
+    text-align: center;
+    font-size: smaller;
+  }
+  pre {
+    width: 100%;
+    overflow-x: auto;
+    // white-space: pre-wrap;
+    code {
+      font-size: smaller;
+    }
+  }
+}
+
+#case-study-footer {
+  background-color: $secondary-color;
+  color: $light-text-color;
+  border: none;
 }

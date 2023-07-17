@@ -1,33 +1,17 @@
-:root {
-  --primary-color: #840014;
-  --darker-primary-color: #640304;
-  --lighter-primary-color: #963b61;
-  --secondary-color: #2b2b2b;
-  --lighter-secondary-color: #959595;
-  --dark-text-color: #2b2b2b;
-  --light-text-color: #ebeaea;
-  --bg-color: white;
-  --gray-bg-color: #ebeaea;
-  --red-bg-color: #640304;
-  --overlay: rgba(0, 0, 0, 0.3);
-  --border: 1px solid var(--primary-color);
-  --header-offset: 44px;
-}
-
 body,
 html {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.5;
-  color: var(--dark-text-color);
+  color: #2b2b2b;
 }
 
 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 28px;
-  color: var(--primary-color);
+  color: #840014;
   margin: 0.25rem 0;
   line-height: 1.2;
 }
@@ -63,7 +47,7 @@ h4 {
   font-weight: 500;
   font-size: 1.8rem;
   margin: 3rem 0 1.5rem 0;
-  color: var(--primary-color);
+  color: #840014;
 }
 
 h5 {
@@ -88,7 +72,7 @@ p {
 
 a:link,
 a:visited {
-  color: var(--primary-color);
+  color: #840014;
 }
 
 a:hover {
@@ -131,14 +115,14 @@ a.button:active {
 
 .button-primary,
 a.button-primary {
-  background-color: var(--primary-color);
-  color: var(--light-text-color);
+  background-color: #840014;
+  color: #ebeaea;
 }
 
 .button-secondary,
 a.button-secondary {
-  background-color: var(--secondary-color);
-  color: var(--light-text-color);
+  background-color: #2b2b2b;
+  color: #ebeaea;
 }
 
 .main-menu {
@@ -152,11 +136,6 @@ a.button-secondary {
   display: flex;
   justify-content: flex-end;
   gap: 3%;
-}
-@media all and (max-width: 576px) {
-  .main-menu ul {
-    justify-content: space-around;
-  }
 }
 @media (max-width: 576px) {
   .main-menu {
@@ -185,7 +164,7 @@ a.button-secondary {
     height: 4px;
     width: 28px;
     top: 13px;
-    background-color: var(--primary-color);
+    background-color: #840014;
   }
   .mobile-menu-button .hamburger-icon:before {
     transition-duration: 0.5s;
@@ -193,7 +172,7 @@ a.button-secondary {
     height: 4px;
     width: 28px;
     top: -8px;
-    background-color: var(--primary-color);
+    background-color: #840014;
     content: "";
   }
   .mobile-menu-button .hamburger-icon:after {
@@ -202,7 +181,7 @@ a.button-secondary {
     height: 4px;
     width: 28px;
     top: 8px;
-    background-color: var(--primary-color);
+    background-color: #840014;
     content: "";
   }
   .mobile-menu-button.show-menu .hamburger-icon {
@@ -222,7 +201,7 @@ a.button-secondary {
 .mobile-menu {
   position: absolute;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: #840014;
   z-index: 9;
 }
 .mobile-menu ul {
@@ -240,14 +219,14 @@ a.button-secondary {
   transition: height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .mobile-menu li a {
-  color: var(--light-text-color);
+  color: #ebeaea;
   text-decoration: none;
   width: 100%;
   visibility: hidden;
 }
 .mobile-menu.show-menu li {
   height: 2rem;
-  border-bottom: 1px solid var(--light-text-color);
+  border-bottom: 1px solid #ebeaea;
 }
 .mobile-menu.show-menu li a {
   visibility: visible;
@@ -271,11 +250,13 @@ a.button-secondary {
 /* 1 GENERAL */
 * {
   box-sizing: border-box;
+  overflow: auto;
 }
 
-section {
-  border-bottom: var(--border);
-  scroll-margin-top: var(--header-offset);
+section,
+footer {
+  border-bottom: 1px solid #840014;
+  scroll-margin-top: 44px;
 }
 
 /* 2. HEADER */
@@ -283,8 +264,8 @@ section {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--bg-color);
-  border-bottom: var(--border);
+  background-color: white;
+  border-bottom: 1px solid #840014;
 }
 
 .header-container {
@@ -333,14 +314,14 @@ section {
 }
 
 .home-caption {
-  background-color: var(--overlay);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: 2rem;
   right: 15%;
   width: 35%;
   text-align: right;
   padding: 1rem;
-  color: var(--light-text-color);
+  color: #ebeaea;
 }
 @media (max-width: 1400px) {
   .home-caption {
@@ -404,7 +385,7 @@ section {
 
 /* 5 Code */
 #code {
-  background-color: var(--gray-bg-color);
+  background-color: #ebeaea;
 }
 
 .code-container {
@@ -442,8 +423,8 @@ section {
 }
 
 .code-grid__item {
-  border: var(--border);
-  background-color: var(--bg-color);
+  border: 1px solid #840014;
+  background-color: white;
 }
 .code-grid__item .item-image {
   padding: 1px;
@@ -454,8 +435,8 @@ section {
 
 /* 6 CONTACT */
 #contact {
-  background-color: var(--red-bg-color);
-  color: var(--light-text-color);
+  background-color: #640304;
+  color: #ebeaea;
 }
 
 .contact-container {
@@ -503,5 +484,91 @@ section {
   width: 40px;
   height: 40px;
   margin: 0.5rem 0.25rem;
-  color: var(--light-text-color);
+  color: #ebeaea;
+}
+
+/* Case Study */
+#case-study-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #840014;
+}
+#case-study-header a {
+  color: #ebeaea;
+  text-decoration: none;
+}
+#case-study-header h1 {
+  color: #ebeaea;
+}
+#case-study-header h6 {
+  color: #959595;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+@media (max-width: 576px) {
+  #case-study-header {
+    flex-direction: column;
+  }
+}
+
+.case-study-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+}
+@media (max-width: 1200px) {
+  .case-study-container {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  .case-study-container {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.case-study-container .centered-figure {
+  align-self: center;
+}
+.case-study-container .full-width-figure {
+  width: 100%;
+  margin: 0;
+}
+.case-study-container h4 {
+  margin: 6rem 0 1.5rem 0;
+  text-align: left;
+}
+.case-study-container h4.paragraph-title {
+  font-size: 1.4rem;
+  margin: 2rem 0 0.5rem 0;
+}
+.case-study-container h4.small-paragraph-title {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.case-study-container ul {
+  margin-top: 0;
+}
+.case-study-container figcaption {
+  text-align: center;
+  font-size: smaller;
+}
+.case-study-container pre {
+  width: 100%;
+  overflow-x: auto;
+}
+.case-study-container pre code {
+  font-size: smaller;
+}
+
+#case-study-footer {
+  background-color: #2b2b2b;
+  color: #ebeaea;
+  border: none;
 }/*# sourceMappingURL=styles.css.map */

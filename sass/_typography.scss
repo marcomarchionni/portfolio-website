@@ -1,4 +1,5 @@
 @use "_media-queries" as *;
+@use "_variables" as *;
 
 @mixin oswald {
   font-family: "Oswald", sans-serif;

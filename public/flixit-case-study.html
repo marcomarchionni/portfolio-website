@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Marco Marchionni - Flixit - Case Study" />
+    <title>Flixit - Case Study</title>
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header with logo and main menu -->
+    <header id="case-study-header">
+      <div class="header-container">
+        <h1><a href="#case-study">Case Study: FLIXIT</a></h1>
+        <h6 class="author">
+          by
+          <span itemprop="author"
+            ><a href="https://marcomarchionni.com/" target="_blank"
+              >Marco Marchionni</a
+            ></span
+          >
+        </h6>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <section id="case-study">
+        <div class="case-study-container">
+          <figure class="full-width-figure">
+            <img
+              src="img/case-study/flixit-divorzio-italiana.jpg"
+              alt="FlixIt Main Page"
+              width="100%"
+            />
+            <figcaption>
+              M. Mastroianni, S. Sandrelli. Divorzio all'Italiana (1961).
+              Source: Wikipedia
+            </figcaption>
+          </figure>
+          <h4>Introduction</h4>
+          <h4 class="paragraph-title">Overview</h4>
+          <p>
+            <a href="https://flix-it.netlify.app/" target="_blank">FlixIt</a> is
+            a web application that provides information about movies from the
+            Golden Age of Italian Cinema (1960-1980). Users can register, login,
+            edit their profile, search movies, and create a list of favourites.
+          </p>
+          <p>
+            The purpose of the project was to give visibility to a curated
+            selection of Italian Classics that are often overlooked and
+            underrepresented on the web and almost forgotten by the younger
+            generations. FlixIt may serve as a valuable platform for students,
+            movie enthusiasts, and admirers of Italian culture to rediscover and
+            appreciate these gems from the past.
+          </p>
+          <p>
+            The source code is available on GitHub: the
+            <a
+              href="https://github.com/marcomarchionni/itflix-client"
+              target="_blank"
+              >frontend</a
+            >
+            and the
+            <a
+              href="https://github.com/marcomarchionni/movie-api"
+              target="_blank"
+              >backend</a
+            >
+          </p>
+          <h4 class="paragraph-title">Tech Stack</h4>
+          <p>Backend:</p>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Passoport</li>
+            <li>Mongoose</li>
+            <li>MongoDb</li>
+          </ul>
+          <p>Frontend:</p>
+          <ul>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>React Bootstrap</li>
+            <li>React Router</li>
+            <li>React Redux</li>
+          </ul>
+          <h4 class="paragraph-title">Objective</h4>
+          <p>
+            This project is part of the CareerFoundry full-stack development
+            course. The aim is to design, create and deploy a full-stack
+            application using the latest technologies.
+          </p>
+          <h4 class="paragraph-title">Duration</h4>
+          <p>
+            The duration of this project was approximately 2 months: 1 month for
+            the backend, 1 month for the frontend.
+          </p>
+          <h4>A Full-Stack Application</h4>
+          <p>
+            A full-stack application consists of two parts: the frontend and the
+            backend. The frontend is the interface through which users interact
+            while the backend handles the frontend requests, including user
+            authentication, data validation, database connection, and data
+            management.
+          </p>
+          <h4 class="paragraph-title">The Frontend</h4>
+          <h4 class="small-paragraph-title">React</h4>
+          <p>
+            React is a powerful JavaScript library developed by Meta for
+            creating dynamic web applications. Unlike a traditional static
+            website, a web application can produce HTML content dynamically at
+            request time, which allows for personalised experiences for each
+            user.
+          </p>
+          <h4 class="small-paragraph-title">React Components</h4>
+          <p>
+            To understand how React works, let’s examine our Flixit main page
+            from <a href="#figure-1">Figure 1</a>.
+          </p>
+          <figure id="figure-1" class="centered-figure">
+            <img
+              src="img/flixit-app-screenshot-16:10.png"
+              alt="FlixIt Main Page"
+              width="100%"
+            />
+            <figcaption>Figure 1. Flixit main page</figcaption>
+          </figure>
+          <p>
+            We can identify several visual elements, such as
+            <b>movie cards</b> displaying movie information, two
+            <b>buttons</b> under the movie titles and a <b>search box</b> in the
+            top-left corner.
+          </p>
+          <p>
+            React enables us to build complex web applications by organising
+            them into multiple components. These components can be further
+            broken down into smaller components, making them easier to code,
+            test, manage, and reuse.
+          </p>
+          <p>
+            A React component visual appearance may vary according to its data.
+            For example, the favourite button may display a white star or with a
+            black star (<a href="#figure-2">Figure 2</a>).
+          </p>
+          <figure id="figure-2" class="centered-figure">
+            <img
+              src="img/case-study/flixit-favorite-button.png"
+              alt="FlixIt favorite button"
+              width="300px"
+            />
+            <figcaption>Figure 2. Favourite button</figcaption>
+          </figure>
+          <p>
+            The button appearance is determined by a special state variable
+            called <b>favourite</b>. If the movie is among the user’s
+            favourites, <b>favourite</b> is set to “true” and a black star icon
+            is displayed on the button. Otherwise, the star will be white. Here
+            is a code snippet from the StarButton component:
+          </p>
+          <pre>
+              <code>
+  &lt;Button&gt;
+    {favourite ? &lt;StarFill className="bi" /&gt; : &lt;Star className="bi"/&gt;}
+  &lt;/Button&gt;
+              </code>
+            </pre>
+          <p>
+            Let’s now examine the MovieCard component, which is responsible for
+            rendering a movie card like the one in
+            <a href="#figure-3">Figure 3</a>. Inside the MovieCard component, a
+            <i>state</i> variable called <b>movie</b> contains information about
+            the movie poster and title, determining the appearance of the card.
+            Two nested components, StarButton and InfoButton, are included at
+            the bottom of the card.
+          </p>
+          <figure id="figure-3" class="centered-figure">
+            <img
+              src="img/case-study/flixit-movie-card.png"
+              alt="FlixIt movie card"
+              width="300px"
+            />
+            <figcaption>Figure 3. Movie Card</figcaption>
+          </figure>
+          <h4 class="small-paragraph-title">React Redux</h4>
+          <p>
+            As we already mentioned, the <i>state</i> variable
+            <b>favourite</b> controls the appearance of the StarButton
+            component. But how is this variable set? How do the component know
+            if the movie on the card is a user’s favourite?
+          </p>
+          <p>
+            To solve the problem, the component needs access to the user’s list
+            of favourites, which is stored in the variable <b>user</b>. This
+            data is retrieved from the backend by the LoginView component when a
+            user logs in. In React, data is typically passed from a parent
+            component to a child component through parameters called props. In
+            this case, however, passing the variable <b>user</b> from the
+            LoginView component to the MovieCard and StarButton components can
+            be cumbersome and error-prone, due to the length of traversal path
+            (<a href="#figure-4">Figure 4</a>).
+          </p>
+          <figure id="figure-4" class="centered-figure">
+            <img
+              src="img/case-study/flixit-components-diagram.png"
+              alt="FlixIt components diagram"
+              width="100%"
+            />
+            <figcaption>Figure 4. Components Diagram</figcaption>
+          </figure>
+          <p>
+            To address this issue, we can leverage React Redux. Redux is a state
+            management technology that simplifies access to global variables for
+            React components. With React Redux, variables are saved in a
+            centralised store, which can be easily accessed from any component
+            (<a href="#figure-5">Figure 5</a>).
+          </p>
+          <figure id="figure-5" class="centered-figure">
+            <img
+              src="img/case-study/flixit-redux-diagram.png"
+              alt="FlixIt redux diagram"
+              width="100%"
+            />
+            <figcaption>Figure 5. Redux Diagram</figcaption>
+          </figure>
+          <p>
+            When a user logs in, the LoginView component saves the variable
+            <b>user</b> in the Redux store and redirects to the main page.
+            Before rendering, each MovieCard component accesses the variable
+            <b>user</b>, checks if the movie is a favourite and passes the
+            result to the StarButton. The StarButton updates its state
+            accordingly. If this value is true, a black star icon will be
+            displayed on the button.
+          </p>
+          <h4 class="paragraph-title">Backend</h4>
+          <h4 class="small-paragraph-title">The data flow</h4>
+          <p>
+            In the previous section, we discussed how data may affect the
+            frontend appearance. Now let’s examine where the data is stored and
+            how it flows through the different parts of the application (<a
+              href="#figure-6"
+              >Figure 6</a
+            >).
+          </p>
+          <p>
+            Here is a simple scenario: after a user logs in, a collection of
+            movie cards appear on the screen. How does this process occur?
+          </p>
+          <figure id="figure-6" class="centered-figure">
+            <img
+              src="img/case-study/flixit-data-flow.png"
+              alt="FlixIt data flow"
+              width="100%"
+            />
+            <figcaption>Figure 6. Data flow</figcaption>
+          </figure>
+          <p>
+            The frontend doesn’t hold any user or movie data. Instead, data is
+            stored in a MongoDb Atlas cloud database, which is connected to a
+            Node.js/Express backend. To access the data, the frontend sends a
+            HTTP request to
+            <a href="https://itflix-api.herokuapp.com/documentation"
+              >one of the backend’s API endpoints</a
+            >. In our scenario, to retrieve the list of all movies, the frontend
+            sends a GET request to the following endpoint:
+          </p>
+          <pre>
+              <code>
+  https://&lt;flixit-api-domain&gt;/movies
+              </code>
+            </pre>
+          <p>
+            If the request is authorised*, the backend retrieves the data from a
+            MongoDb Atlas cloud database and includes it in the response body in
+            JSON format. Here is an example of a JSON object containing
+            information about a movie.
+          </p>
+          <pre>
+              <code>
+  {
+    "title": "A Fistful of Dollars",
+    "director": {
+      "name": "Sergio Leone",
+      "born": "1929-01-03",
+      "died": "1989-04-30",
+      "bio": "..."
+    },
+    "stars": [
+      {
+        "name": "Clint Eastwood",
+        "born": "1930-05-31",
+        "bio": "..."
+      },
+      {
+        ...
+      }
+    ],
+    "genre": {
+      "name": "Spaghetti Western",
+      "description": "..."
+    }
+    "year": "1964",
+    "posterUrl": "...",
+    "photoUrl": "..."
+    ...
+  }              
+            </code>
+          </pre>
+          <p>
+            The frontend is now able to render the page. Each movie data is
+            assigned to a MovieCard component which displays the relevant
+            information. The final result is visible in
+            <a href="#figure-1">Figure 1</a>.
+          </p>
+          <p>
+            * The request must provide a valid security token and its origin
+            should be allowed
+          </p>
+          <h4 class="paragraph-title">Conclusions</h4>
+          <h4 class="small-paragraph-title">Retrospective</h4>
+          <p>
+            Building a web application with the MERN stack (MongoDb, Express,
+            React, Nodejs) was made relatively easy due to the abundance of
+            libraries, resources and online documentation available.
+          </p>
+          <p>
+            The project presented some challenges that were overcome through
+            valuable learning experiences. In particular:
+          </p>
+          <ul>
+            <li>
+              Managing dependencies and finding the right combination of tools
+              and libraries to ensure compatibility and functionality required
+              thorough investigation and problem-solving skills. Although this
+              aspect may not be the most thrilling, it is an essential skill for
+              web development.
+            </li>
+            <li>
+              As the number of React components grows, maintaining a clear
+              application flow becomes increasingly challenging. To mitigate
+              this, organising files and folders, and categorising components
+              based on their function proved crucial. Maintaining a tidy and
+              structured codebase prepares the application for scalability.
+            </li>
+          </ul>
+          <h4 class="small-paragraph-title">Further improvements</h4>
+          <p>
+            While FlixIt currently stands as a full-fledged web application, its
+            functionalities remain relatively basic. Here are a few ideas to
+            enhance the user experience further:
+          </p>
+          <ul>
+            <li>
+              Introduce Director and Genre Views to provide information about
+              directors and genres.
+            </li>
+            <li>
+              Include a “Where to watch” section in movie details, linking
+              online platforms for buying, renting, or streaming the movie.
+            </li>
+            <li>
+              Provide external resource links such as articles or blog posts.
+            </li>
+            <li>Expand and enrich the movie selection in the database.</li>
+          </ul>
+          <h4 class="small-paragraph-title">About this case study</h4>
+          <p>
+            The case study aimed to provide a comprehensive understanding of the
+            Flixit app, catering to individuals with varying technical
+            knowledge. While we have covered only a portion of the app's
+            functionalities for the sake of simplicity, it is worth highlighting
+            some key aspects for further discussion:
+          </p>
+          <ul>
+            <li>
+              User Authentication leverages
+              <a href="https://www.passportjs.org/">Passport</a>, a powerful
+              authentication middleware, to ensure secure user registration,
+              login, and session management.
+            </li>
+            <li>
+              The backend effectively manages database connection and data
+              modelling using <a href="https://mongoosejs.com/">Mongoose</a>, a
+              solution that simplifies data management for Node.js and MongoDb.
+            </li>
+            <li>
+              The app utilises
+              <a href="https://reactrouter.com/en/main">React Router</a> for
+              page navigation and routing.
+            </li>
+            <li>
+              Component styling is made easier and more consistent through the
+              use of
+              <a href="https://react-bootstrap.github.io/">React Bootstrap</a>.
+            </li>
+          </ul>
+          <p>
+            For more information, please refer to the GitHub repositories: the
+            <a href="https://github.com/marcomarchionni/flixit-api">backend</a>
+            and the
+            <a href="https://github.com/marcomarchionni/flixit-client"
+              >frontend</a
+            >.
+          </p>
+          <br />
+        </div>
+      </section>
+      <footer id="case-study-footer">
+        <div class="contact-container">
+          <div class="contact-address">
+            <h5>Address</h5>
+            <address>
+              via Alfonso Marchesani 56<br />
+              66054 Vasto Marina (CH)<br />
+              ITALY
+            </address>
+          </div>
+          <div class="contact-social">
+            <h5>Find me on</h5>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/marco-marchionni-50886a241/"
+                target="_blank"
+                ><img src="img/linkedin-logo.svg" alt="linkedin logo"
+              /></a>
+              <a href="https://github.com/marcomarchionni" target="_blank"
+                ><img src="img/github-logo.svg" alt="github logo"
+              /></a>
+              <a
+                href="https://stackoverflow.com/users/2864211/marcomk"
+                target="_blank"
+                ><img src="img/stackoverflow-logo.svg" alt="stackoverflow logo"
+              /></a>
+            </div>
+          </div>
+          <div class="contact-email">
+            <h5>Email</h5>
+            <p>code@marcomarchionni.com</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDiEquXzhbFm0_i4_7iNZ_UghX4XMmYh-w",
+        authDomain: "personal-portfolio-f3a9d.firebaseapp.com",
+        projectId: "personal-portfolio-f3a9d",
+        storageBucket: "personal-portfolio-f3a9d.appspot.com",
+        messagingSenderId: "105775211368",
+        appId: "1:105775211368:web:b5390057a980ea1ad86cdd",
+        measurementId: "G-ZYBXB0EV0P",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
