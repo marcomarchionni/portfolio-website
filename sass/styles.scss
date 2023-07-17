@@ -228,6 +228,7 @@ footer {
 .case-study-container {
   @include container();
   align-items: flex-start;
+  margin-bottom: 3rem;
   .centered-figure {
     align-self: center;
   }
