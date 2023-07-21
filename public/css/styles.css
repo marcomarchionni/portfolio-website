@@ -564,7 +564,37 @@ footer {
   color: #eaeaea;
 }
 
-/* 8 Case Study */
+/* 8 Credits */
+#credits {
+  background-color: black;
+  color: #eaeaea;
+  font-size: 0.6rem;
+}
+#credits a {
+  color: #bbbbbb;
+}
+
+.credits-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .credits-container {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  .credits-container {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* 9 Case Study */
 #case-study-header {
   position: sticky;
   top: 0;

@@ -276,7 +276,21 @@ footer {
   }
 }
 
-/* 8 Case Study */
+/* 8 Credits */
+#credits {
+  background-color: $credits-bg-color;
+  color: $light-text-color;
+  font-size: 0.6rem;
+  a {
+    color: $credits-link-color;
+  }
+}
+
+.credits-container {
+  @include container();
+}
+
+/* 9 Case Study */
 #case-study-header {
   @include stickyHeader();
   background-color: $primary-color;
