@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Select all main menu items and add 'click' event listeners
   const menuItems = document.querySelectorAll(".main-menu__item");
+  const mainTitleLink = document.querySelector(".main-title__link");
   menuItems.forEach((item) => item.addEventListener("click", onMenuClick));
+  mainTitleLink.addEventListener("click", onMenuClick);
 
   // Select mobile menu components and add 'click' event listeners
   const hamburgerButton = document.querySelector(".mobile-menu-button");
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Highlight menu item while viewing the corresponding section */
 
   // Initialize active menu
-  const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll(".anchor-section");
   let activeSectionIndex;
   const headerOffset = document.querySelector("header").offsetHeight + 1;
   setActiveMenu();
@@ -29,10 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setActiveMenu() {
     // Function to add/remove 'active' class from menu items
-    function toggleActiveClass(index) {
-      if (index != undefined) {
+    function toggleActiveClass(activeSectionIndex) {
+      if (activeSectionIndex != undefined) {
+        // Since home section has no corresponding menu, aling sections with menus
+        const activeMenuIndex = activeSectionIndex - 1;
         menuItems.forEach((menuItem, i) => {
-          if (i === index) {
+          if (i === activeMenuIndex) {
             menuItem.classList.add("active");
           } else {
             menuItem.classList.remove("active");
@@ -49,19 +53,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (scrolledToBottom()) {
       // Set the last menu item active
-      const lastMenuItemIndex = menuItems.length - 1;
-      toggleActiveClass(lastMenuItemIndex);
-      activeSectionIndex = lastMenuItemIndex;
+      const lastSectionIndex = sections.length - 1;
+      toggleActiveClass(lastSectionIndex);
+      activeSectionIndex = lastSectionIndex;
     } else {
       // Find the current section
-      const sectionIndexes = Array.from(sections)
+      const scrolledSectionsIndexes = Array.from(sections)
         .map(function (section, index) {
-          if (section.getBoundingClientRect().top < headerOffset) {
+          const pixelsToSection =
+            section.getBoundingClientRect().top - headerOffset;
+          if (pixelsToSection < 1) {
             return index;
           }
         })
         .filter((item) => item != undefined);
-      const currentSectionIndex = sectionIndexes[sectionIndexes.length - 1];
+      const currentSectionIndex =
+        scrolledSectionsIndexes[scrolledSectionsIndexes.length - 1];
 
       // If current section has changed, update the active menu
       if (activeSectionIndex !== currentSectionIndex) {

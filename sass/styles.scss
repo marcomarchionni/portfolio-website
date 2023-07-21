@@ -34,6 +34,22 @@
   z-index: 10;
 }
 
+@mixin header-shadow() {
+  box-shadow: 0 4px 6px -2px $shadow-color;
+  // transition: box-shadow 0.3s ease;
+  // &:hover {
+  //   box-shadow: 0 8px 12px -4px $shadow-color;
+  // }
+}
+
+@mixin card-shadow() {
+  box-shadow: 0 4px 6px $shadow-color;
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 8px 12px $shadow-color;
+  }
+}
+
 /* 1 GENERAL */
 
 * {
@@ -42,7 +58,6 @@
 
 section,
 footer {
-  border-bottom: $border;
   scroll-margin-top: $header-offset;
 }
 
@@ -50,8 +65,8 @@ footer {
 
 #header {
   @include stickyHeader();
+  @include header-shadow();
   background-color: $bg-color;
-  border-bottom: $border;
 }
 
 .header-container {
@@ -60,6 +75,11 @@ footer {
   justify-content: space-between;
 }
 
+.main-title {
+  a {
+    text-decoration: none;
+  }
+}
 /* 3 HOME */
 
 #home {
@@ -112,6 +132,10 @@ footer {
 
 /* 4 ABOUT */
 
+#about {
+  background-color: $about-bg-color;
+}
+
 .about-container {
   @include container();
 }
@@ -133,19 +157,68 @@ footer {
   text-align: center;
 }
 
-/* 5 Code */
-
-#code {
-  background-color: $gray-bg-color;
+/* Skills */
+#skills {
+  background-color: $skills-bg-color;
 }
 
-.code-container {
+.skills-container {
+  @include container();
+  align-items: flex-start;
+  padding-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.skills-grid__item {
+  padding: 1rem;
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 2rem;
+  @include card-shadow();
+
+  h5 {
+    text-align: left;
+  }
+  ul {
+    padding-inline-start: 0;
+    list-style-type: none;
+  }
+  .item-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    img {
+      height: 80px;
+    }
+  }
+  .item-text {
+    margin-left: 5%;
+  }
+}
+
+/* 6 Projects */
+
+#projects {
+  background-color: $projects-bg-color;
+}
+
+.projects-container {
   @include container();
   gap: 3rem;
   padding-bottom: 3rem;
 }
 
-.code-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -155,21 +228,21 @@ footer {
   }
 }
 
-.code-grid__item {
-  border: $border;
+.projects-grid__item {
   background-color: $bg-color;
-  .item-image {
-    padding: 1px;
-  }
+  @include card-shadow();
+  // .item-image {
+  //   padding: 1px;
+  // }
   .item-text {
     padding: 1.5rem;
   }
 }
 
-/* 6 CONTACT */
+/* 7 Contact */
 
 #contact {
-  background-color: $red-bg-color;
+  background-color: $contact-bg-color;
   color: $light-text-color;
 }
 
@@ -203,7 +276,7 @@ footer {
   }
 }
 
-/* Case Study */
+/* 8 Case Study */
 #case-study-header {
   @include stickyHeader();
   background-color: $primary-color;

@@ -11,7 +11,7 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 28px;
-  color: #840014;
+  color: #901a2c;
   margin: 0.25rem 0;
   line-height: 1.2;
 }
@@ -47,7 +47,7 @@ h4 {
   font-weight: 500;
   font-size: 1.8rem;
   margin: 3rem 0 1.5rem 0;
-  color: #840014;
+  color: #901a2c;
 }
 
 h5 {
@@ -72,7 +72,8 @@ p {
 
 a:link,
 a:visited {
-  color: #840014;
+  color: #901a2c;
+  box-shadow: all 0.3s ease;
 }
 
 a:hover {
@@ -115,14 +116,14 @@ a.button:active {
 
 .button-primary,
 a.button-primary {
-  background-color: #840014;
-  color: #ebeaea;
+  background-color: #901a2c;
+  color: #eaeaea;
 }
 
 .button-secondary,
 a.button-secondary {
   background-color: #2b2b2b;
-  color: #ebeaea;
+  color: #eaeaea;
 }
 
 .main-menu {
@@ -164,7 +165,7 @@ a.button-secondary {
     height: 4px;
     width: 28px;
     top: 13px;
-    background-color: #840014;
+    background-color: #901a2c;
   }
   .mobile-menu-button .hamburger-icon:before {
     transition-duration: 0.5s;
@@ -172,7 +173,7 @@ a.button-secondary {
     height: 4px;
     width: 28px;
     top: -8px;
-    background-color: #840014;
+    background-color: #901a2c;
     content: "";
   }
   .mobile-menu-button .hamburger-icon:after {
@@ -181,7 +182,7 @@ a.button-secondary {
     height: 4px;
     width: 28px;
     top: 8px;
-    background-color: #840014;
+    background-color: #901a2c;
     content: "";
   }
   .mobile-menu-button.show-menu .hamburger-icon {
@@ -201,7 +202,7 @@ a.button-secondary {
 .mobile-menu {
   position: absolute;
   width: 100%;
-  background-color: #840014;
+  background-color: #901a2c;
   z-index: 9;
 }
 .mobile-menu ul {
@@ -219,14 +220,14 @@ a.button-secondary {
   transition: height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .mobile-menu li a {
-  color: #ebeaea;
+  color: #eaeaea;
   text-decoration: none;
   width: 100%;
   visibility: hidden;
 }
 .mobile-menu.show-menu li {
   height: 2rem;
-  border-bottom: 1px solid #ebeaea;
+  border-bottom: 1px solid #eaeaea;
 }
 .mobile-menu.show-menu li a {
   visibility: visible;
@@ -254,7 +255,6 @@ a.button-secondary {
 
 section,
 footer {
-  border-bottom: 1px solid #840014;
   scroll-margin-top: 44px;
 }
 
@@ -263,8 +263,8 @@ footer {
   position: sticky;
   top: 0;
   z-index: 10;
+  box-shadow: 0 4px 6px -2px #959595;
   background-color: white;
-  border-bottom: 1px solid #840014;
 }
 
 .header-container {
@@ -287,6 +287,10 @@ footer {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+}
+
+.main-title a {
+  text-decoration: none;
 }
 
 /* 3 HOME */
@@ -320,7 +324,7 @@ footer {
   width: 35%;
   text-align: right;
   padding: 1rem;
-  color: #ebeaea;
+  color: #eaeaea;
 }
 @media (max-width: 1400px) {
   .home-caption {
@@ -344,6 +348,10 @@ footer {
 }
 
 /* 4 ABOUT */
+#about {
+  background-color: #fbfbfb;
+}
+
 .about-container {
   width: 70%;
   margin: auto;
@@ -382,12 +390,81 @@ footer {
   text-align: center;
 }
 
-/* 5 Code */
-#code {
-  background-color: #ebeaea;
+/* Skills */
+#skills {
+  background-color: #eeeeee;
 }
 
-.code-container {
+.skills-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  padding-bottom: 3rem;
+}
+@media (max-width: 1200px) {
+  .skills-container {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  .skills-container {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.skills-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.skills-grid__item {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 2rem;
+  box-shadow: 0 4px 6px #959595;
+  transition: box-shadow 0.3s ease;
+}
+.skills-grid__item:hover {
+  box-shadow: 0 8px 12px #959595;
+}
+.skills-grid__item h5 {
+  text-align: left;
+}
+.skills-grid__item ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style-type: none;
+}
+.skills-grid__item .item-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.skills-grid__item .item-image img {
+  height: 80px;
+}
+.skills-grid__item .item-text {
+  margin-left: 5%;
+}
+
+/* 6 Projects */
+#projects {
+  background-color: #f7f7f7;
+}
+
+.projects-container {
   width: 70%;
   margin: auto;
   display: flex;
@@ -397,45 +474,46 @@ footer {
   padding-bottom: 3rem;
 }
 @media (max-width: 1200px) {
-  .code-container {
+  .projects-container {
     width: 90%;
   }
 }
 @media (max-width: 576px) {
-  .code-container {
+  .projects-container {
     width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
 
-.code-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 @media (max-width: 768px) {
-  .code-grid {
+  .projects-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 }
 
-.code-grid__item {
-  border: 1px solid #840014;
+.projects-grid__item {
   background-color: white;
+  box-shadow: 0 4px 6px #959595;
+  transition: box-shadow 0.3s ease;
 }
-.code-grid__item .item-image {
-  padding: 1px;
+.projects-grid__item:hover {
+  box-shadow: 0 8px 12px #959595;
 }
-.code-grid__item .item-text {
+.projects-grid__item .item-text {
   padding: 1.5rem;
 }
 
-/* 6 CONTACT */
+/* 7 Contact */
 #contact {
   background-color: #640304;
-  color: #ebeaea;
+  color: #eaeaea;
 }
 
 .contact-container {
@@ -483,22 +561,22 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0.5rem 0.25rem;
-  color: #ebeaea;
+  color: #eaeaea;
 }
 
-/* Case Study */
+/* 8 Case Study */
 #case-study-header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #840014;
+  background-color: #901a2c;
 }
 #case-study-header a {
-  color: #ebeaea;
+  color: #eaeaea;
   text-decoration: none;
 }
 #case-study-header h1 {
-  color: #ebeaea;
+  color: #eaeaea;
 }
 #case-study-header h6 {
   color: #959595;
@@ -569,6 +647,6 @@ footer {
 
 #case-study-footer {
   background-color: #2b2b2b;
-  color: #ebeaea;
+  color: #eaeaea;
   border: none;
 }/*# sourceMappingURL=styles.css.map */

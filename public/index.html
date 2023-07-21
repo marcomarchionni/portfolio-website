@@ -32,15 +32,10 @@
     <header id="header">
       <div class="header-container">
         <div class="main-title">
-          <h1>MARCO MARCHIONNI</h1>
+          <h1><a class="main-title__link" href="#home">MARCO MARCHIONNI</a></h1>
         </div>
         <nav class="main-menu">
           <ul role="menubar">
-            <li role="presentation">
-              <a role="menuitem" href="#home" class="main-menu__item"
-                ><h3>Home</h3></a
-              >
-            </li>
             <li role="presentation">
               <a
                 role="menuitem"
@@ -51,8 +46,13 @@
               >
             </li>
             <li role="presentation">
-              <a role="menuitem" href="#code" class="main-menu__item"
-                ><h3>Code</h3></a
+              <a role="menuitem" href="#skills" class="main-menu__item"
+                ><h3>Skills</h3></a
+              >
+            </li>
+            <li role="presentation">
+              <a role="menuitem" href="#projects" class="main-menu__item"
+                ><h3>Projects</h3></a
               >
             </li>
             <li role="presentation">
@@ -69,11 +69,6 @@
       <nav class="mobile-menu">
         <ul role="menubar">
           <li>
-            <a role="menuitem" href="#home" class="mobile-menu__item"
-              ><h3>Home</h3></a
-            >
-          </li>
-          <li>
             <a
               role="menuitem"
               href="#about"
@@ -83,8 +78,13 @@
             >
           </li>
           <li>
-            <a role="menuitem" href="#code" class="mobile-menu__item"
-              ><h3>Code</h3></a
+            <a role="menuitem" href="#skills" class="mobile-menu__item"
+              ><h3>Skills</h3></a
+            >
+          </li>
+          <li>
+            <a role="menuitem" href="#projects" class="mobile-menu__item"
+              ><h3>Projects</h3></a
             >
           </li>
           <li>
@@ -99,7 +99,7 @@
 
     <!-- Main content -->
     <main>
-      <section id="home">
+      <section id="home" class="anchor-section">
         <div class="home-caption">
           <h2>
             I'm a full-stack developer with a full range of interests and
@@ -107,7 +107,7 @@
           </h2>
         </div>
       </section>
-      <section id="about">
+      <section id="about" class="anchor-section">
         <div class="about-container">
           <div class="about-text">
             <h4>About</h4>
@@ -160,10 +160,98 @@
           </div>
         </div>
       </section>
-      <section id="code">
-        <div class="code-container">
-          <div class="code-text">
-            <h4>Code</h4>
+      <section id="skills" class="anchor-section">
+        <div class="skills-container">
+          <div class="skills-text">
+            <h4>Skills</h4>
+          </div>
+          <div class="skills-grid">
+            <div class="skills-grid__item skills-item-1">
+              <div class="item-image">
+                <img src="img/skills/languages.png" />
+              </div>
+              <div class="item-text">
+                <h5>Languages</h5>
+                <ul>
+                  <li>Java</li>
+                  <li>JavaScript</li>
+                  <li>DAX</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-grid__item skills-item-2">
+              <div class="item-image">
+                <img src="img/skills/frontend.png" />
+              </div>
+              <div class="item-text">
+                <h5>Frontend</h5>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>SCSS</li>
+                  <li>jQuery</li>
+                  <li>React</li>
+                  <li>React Native</li>
+                  <li>Angular</li>
+                  <li>Bootstrap</li>
+                  <li>Angular Material</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-grid__item skills-item-3">
+              <div class="item-image">
+                <img src="img/skills/backend.png" />
+              </div>
+              <div class="item-text">
+                <h5>Backend</h5>
+                <ul>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>Spring</li>
+                  <li>Spring Boot</li>
+                  <li>Mongoose</li>
+                  <li>Hibernate</li>
+                  <li>MongoDb</li>
+                  <li>MySql</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-grid__item skills-item-4">
+              <div class="item-image">
+                <img src="img/skills/cloud.png" />
+              </div>
+              <div class="item-text">
+                <h5>Cloud</h5>
+                <ul>
+                  <li>AWS</li>
+                  <li>Heroku</li>
+                  <li>MongoDb Atlas</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills-grid__item skills-item-5">
+              <div class="item-image">
+                <img src="img/skills/tools.png" />
+              </div>
+              <div class="item-text">
+                <h5>Tools</h5>
+                <ul>
+                  <li>Git</li>
+                  <li>Maven</li>
+                  <li>Parcel</li>
+                  <li>Postman</li>
+                  <li>VSCode</li>
+                  <li>Intellij Idea</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="anchor-section">
+        <div class="projects-container">
+          <div class="projects-text">
+            <h4>Projects</h4>
             <p>
               I'm currently working on a comprehensive portfolio management tool
               which connects to an
@@ -184,9 +272,9 @@
               >.
             </p>
           </div>
-          <div class="code-grid">
+          <div class="projects-grid">
             <!-- Grid item -->
-            <div class="code-grid__item">
+            <div class="projects-grid__item">
               <div class="item-image">
                 <img
                   src="./img/flixit-angular-16:10.png"
@@ -222,7 +310,7 @@
               </div>
             </div>
             <!-- Grid item -->
-            <div class="code-grid__item">
+            <div class="projects-grid__item">
               <div class="item-image">
                 <img
                   src="./img/flixit-app-screenshot-16:10.png"
@@ -268,7 +356,7 @@
               </div>
             </div>
             <!-- Grid item -->
-            <div class="code-grid__item">
+            <div class="projects-grid__item">
               <div class="item-image">
                 <img
                   src="./img/meet-app-screenshot-16:10.png"
@@ -305,7 +393,7 @@
               </div>
             </div>
             <!-- Grid item 3 -->
-            <div class="code-grid__item">
+            <div class="projects-grid__item">
               <div class="item-image">
                 <img
                   src="./img/chat-screenshots-16:10.png"
@@ -339,7 +427,7 @@
               </div>
             </div>
             <!-- Grid item -->
-            <div class="code-grid__item">
+            <div class="projects-grid__item">
               <div class="item-image">
                 <img
                   src="./img/pokedex-app-screenshot-16:10.png"
@@ -374,7 +462,7 @@
               </div>
             </div>
             <!-- Grid item 6 -->
-            <!-- <div class="code-grid__item">
+            <!-- <div class="projects-grid__item">
               <div class="item-image">
                 <img
                   src="./img/placeholder-16:10.png"
@@ -399,7 +487,7 @@
           </div>
         </div>
       </section>
-      <footer id="contact">
+      <footer id="contact" class="anchor-section">
         <div class="contact-container">
           <div class="contact-address">
             <h5>Address</h5>
@@ -429,7 +517,7 @@
           </div>
           <div class="contact-email">
             <h5>Email</h5>
-            <p>code@marcomarchionni.com</p>
+            <p>dev@marcomarchionni.com</p>
           </div>
         </div>
       </footer>
