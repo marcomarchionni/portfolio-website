@@ -8,47 +8,9 @@
 
 @use "_mobile-menu";
 
-@use "_media-queries" as *;
+@use "_mixins" as *;
 
-@mixin container() {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include large() {
-    width: 90%;
-  }
-
-  @include xsmall() {
-    width: 100%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@mixin stickyHeader() {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-@mixin header-shadow() {
-  box-shadow: 0 4px 6px -2px $shadow-color;
-  // transition: box-shadow 0.3s ease;
-  // &:hover {
-  //   box-shadow: 0 8px 12px -4px $shadow-color;
-  // }
-}
-
-@mixin card-shadow() {
-  box-shadow: 0 4px 6px $shadow-color;
-  transition: box-shadow 0.3s ease;
-  &:hover {
-    box-shadow: 0 8px 12px $shadow-color;
-  }
-}
+@use "_case-study" as *;
 
 /* 1 GENERAL */
 
@@ -65,7 +27,7 @@ footer {
 
 #header {
   @include stickyHeader();
-  @include header-shadow();
+  @include headerShadow();
   background-color: $bg-color;
 }
 
@@ -171,8 +133,15 @@ footer {
 .skills-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
   gap: 1rem;
+
+  @include xlarge() {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include small() {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 .skills-grid__item {
@@ -182,16 +151,26 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  line-height: 2rem;
-  @include card-shadow();
+  line-height: 1.2em;
+  @include cardShadow();
 
   h5 {
     text-align: left;
   }
   ul {
-    padding-inline-start: 0;
+    padding-left: 0.5em;
     list-style-type: none;
   }
+  li {
+    margin-top: 0.5em;
+  }
+  li::before {
+    content: "-";
+    display: inline-block;
+    width: 0.5em;
+    margin-left: -0.5em;
+  }
+
   .item-image {
     width: 100%;
     display: flex;
@@ -230,10 +209,7 @@ footer {
 
 .projects-grid__item {
   background-color: $bg-color;
-  @include card-shadow();
-  // .item-image {
-  //   padding: 1px;
-  // }
+  @include cardShadow();
   .item-text {
     padding: 1.5rem;
   }
@@ -288,72 +264,4 @@ footer {
 
 .credits-container {
   @include container();
-}
-
-/* 9 Case Study */
-#case-study-header {
-  @include stickyHeader();
-  background-color: $primary-color;
-  a {
-    color: $light-text-color;
-    text-decoration: none;
-  }
-  h1 {
-    color: $light-text-color;
-  }
-  h6 {
-    color: $lighter-secondary-color;
-    font-weight: 400;
-    font-size: 1rem;
-    margin: 0;
-  }
-  @include xsmall() {
-    flex-direction: column;
-  }
-}
-
-.case-study-container {
-  @include container();
-  align-items: flex-start;
-  margin-bottom: 3rem;
-  .centered-figure {
-    align-self: center;
-  }
-  .full-width-figure {
-    width: 100%;
-    margin: 0;
-  }
-  h4 {
-    margin: 6rem 0 1.5rem 0;
-    text-align: left;
-    &.paragraph-title {
-      font-size: 1.4rem;
-      margin: 2rem 0 0.5rem 0;
-    }
-    &.small-paragraph-title {
-      font-size: 1.2rem;
-      margin: 1rem 0 0.5rem 0;
-    }
-  }
-  ul {
-    margin-top: 0;
-  }
-  figcaption {
-    text-align: center;
-    font-size: smaller;
-  }
-  pre {
-    width: 100%;
-    overflow-x: auto;
-    // white-space: pre-wrap;
-    code {
-      font-size: smaller;
-    }
-  }
-}
-
-#case-study-footer {
-  background-color: $secondary-color;
-  color: $light-text-color;
-  border: none;
 }
